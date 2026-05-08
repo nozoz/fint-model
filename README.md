@@ -27,37 +27,34 @@ relations, and inheritance.
 
 ### Generate language sources
 
-From the JSON (preferred — emitters never touch XMI):
+`generate` reads `metamodel.json` only — no XMI access:
 
 ```bash
 fint-model generate -l ALL --resource --from-json metamodel.json
 ```
 
-Or directly from XMI (legacy, identical output):
+Output for `v4.0.20` is byte-identical to the pinned fixture in
+`testdata/golden/v4.0.20/`. To regenerate from XMI in a single
+invocation, chain the two stages:
 
 ```bash
-fint-model -t v4.0.20 generate -l ALL --resource
+fint-model -t v4.0.20 metamodel -o metamodel.json && \
+  fint-model generate --from-json metamodel.json -l ALL --resource
 ```
-
-Both paths produce byte-identical Java + C# against the v4.0.20 fixture
-in `testdata/golden/v4.0.20/`.
 
 ### CLI
 
 ```
 COMMANDS:
-   metamodel       produce canonical metamodel.json from EA XMI
-   generate        generate JAVA/CS sources (--from-json supported)
-   printClasses    list classes
-   listPackages    list Java packages
-   listNamespaces  list CS namespaces
-   listTags        list tags
-   listBranches    list branches
-   help, h         show command help
+   metamodel     produce canonical metamodel.json from EA XMI
+   generate      emit JAVA/CS sources from metamodel.json
+   listTags      list FINT model release tags
+   listBranches  list FINT model branches
+   help, h       show command help
 
-GLOBAL OPTIONS:
-   --owner value          Git repository owner   (default "FINTLabs",            $GITHUB_OWNER)
-   --repo value           Git repository name    (default "fint-informasjonsmodell", $GITHUB_PROJECT)
+GLOBAL OPTIONS (used by metamodel / list*):
+   --owner value          Git repository owner   (default "FINTLabs",                 $GITHUB_OWNER)
+   --repo value           Git repository name    (default "fint-informasjonsmodell",  $GITHUB_PROJECT)
    --filename value       XMI filename           (default "FINT-informasjonsmodell.xml", $MODEL_FILENAME)
    --tag, -t value        model release/tag      (default "latest")
    --force, -f            re-download XMI even if cached
@@ -65,12 +62,12 @@ GLOBAL OPTIONS:
 GENERATE FLAGS:
    --lang, -l VALUE       JAVA | CS | ALL (default JAVA)
    --resource, -r         also emit Resource / Resources classes
-   --from-json PATH       read metamodel.json instead of fetching XMI
+   --from-json PATH       metamodel.json to read (required)
 ```
 
 The downloaded XMI is cached in `$HOME/.fint-model/.cache`. Subsequent
-runs reuse the cache unless `--force` is set. `--from-json` skips the
-download entirely.
+`metamodel` runs reuse the cache unless `--force` is set. `generate`
+itself never touches the XMI — it only consumes the JSON.
 
 ## `metamodel.json` shape
 
