@@ -50,6 +50,8 @@ type Type struct {
 	ExtendsRelations    bool        `json:"extendsRelations"`
 	Writable            bool        `json:"writable"`
 	Documentation       string      `json:"documentation"`
+	Path                *string     `json:"path"`
+	IdFields            []string    `json:"idFields"`
 	Attributes          []Attribute `json:"attributes"`
 	Relations           []Relation  `json:"relations"`
 }

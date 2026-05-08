@@ -86,6 +86,8 @@ itself never touches the XMI — it only consumes the JSON.
           "stereotype": "hovedklasse",
           "parent": null,
           "identifiable": true,
+          "path": "utdanning/vurdering/elevvurdering",
+          "idFields": ["systemId"],
           "attributes": [
             { "name": "systemId",
               "type": "felles-kompleksedatatyper:Identifikator",
@@ -142,6 +144,16 @@ Conventions:
   `extendsIdentifiable`, `extendsResource`, `extendsRelations`,
   `writable`) are baked into the JSON so consumers don't have to
   re-implement the recursion.
+- **`path`** (REST URL fragment) is populated only for `hovedklasse`
+  types — derived as `<component-with-slashes>/<lowercase-typename>`,
+  e.g. `utdanning/vurdering/elevvurdering`. `null` for everything else
+  (datatypes, abstracts, references aren't REST-exposed).
+- **`idFields`** is the parent-chain-flattened list of attribute names
+  whose type is `Identifikator`, populated on every type with
+  `identifiable: true` (including abstract bases like `Begrep`). For
+  `Karakterverdi` extends `Begrep`, `idFields` is `["systemId"]` even
+  though `Karakterverdi`'s own `attributes` array is empty — it
+  inherited `systemId` from `Begrep`.
 
 ## CI integration
 

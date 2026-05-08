@@ -34,7 +34,7 @@ func Build(classes []*types.Class, fintVersion, sourceCommit string) *Document {
 		components = append(components, Component{
 			Name:  name,
 			Path:  componentPath[name],
-			Types: convertTypes(byComponent[name], byQualified, prefix),
+			Types: convertTypes(name, byComponent[name], byQualified, prefix),
 		})
 	}
 
@@ -101,16 +101,16 @@ func componentRefForQualified(qualified, prefix string) string {
 	return strings.ReplaceAll(pkgRel, ".", "-") + ":" + name
 }
 
-func convertTypes(classes []*types.Class, byQualified map[string]*types.Class, prefix string) []Type {
+func convertTypes(componentName string, classes []*types.Class, byQualified map[string]*types.Class, prefix string) []Type {
 	out := make([]Type, 0, len(classes))
 	for _, c := range classes {
-		out = append(out, convertType(c, byQualified, prefix))
+		out = append(out, convertType(componentName, c, byQualified, prefix))
 	}
 	return out
 }
 
-func convertType(c *types.Class, byQualified map[string]*types.Class, prefix string) Type {
-	return Type{
+func convertType(componentName string, c *types.Class, byQualified map[string]*types.Class, prefix string) Type {
+	t := Type{
 		Name:                c.Name,
 		Stereotype:          c.Stereotype,
 		Abstract:            c.Abstract,
@@ -125,6 +125,54 @@ func convertType(c *types.Class, byQualified map[string]*types.Class, prefix str
 		Attributes:          convertAttributes(c, byQualified, prefix),
 		Relations:           convertRelations(c, prefix),
 	}
+	if c.Stereotype == StereotypeMain {
+		path := restPathFor(componentName, c.Name)
+		t.Path = &path
+	}
+	if c.Identifiable {
+		t.IdFields = collectIdFields(c, byQualified)
+	}
+	return t
+}
+
+func restPathFor(componentName, typeName string) string {
+	return strings.ReplaceAll(componentName, "-", "/") + "/" + strings.ToLower(typeName)
+}
+
+func collectIdFields(c *types.Class, byQualified map[string]*types.Class) []string {
+	seen := map[string]struct{}{}
+	visited := map[*types.Class]struct{}{}
+	out := make([]string, 0, 1)
+
+	var visit func(cur *types.Class)
+	visit = func(cur *types.Class) {
+		if cur == nil {
+			return
+		}
+		if _, dup := visited[cur]; dup {
+			return
+		}
+		visited[cur] = struct{}{}
+
+		if cur.Extends != "" {
+			if qualified, ok := resolveShortName(cur.Extends, cur, byQualified); ok {
+				visit(byQualified[qualified])
+			}
+		}
+
+		for _, a := range cur.Attributes {
+			if !strings.EqualFold(a.Type, "identifikator") {
+				continue
+			}
+			if _, dup := seen[a.Name]; dup {
+				continue
+			}
+			seen[a.Name] = struct{}{}
+			out = append(out, a.Name)
+		}
+	}
+	visit(c)
+	return out
 }
 
 func resolveParent(c *types.Class, byQualified map[string]*types.Class, prefix string) *string {
