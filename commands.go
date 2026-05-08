@@ -5,11 +5,8 @@ import (
 	"os"
 
 	"github.com/FINTLabs/fint-model/branches"
-	"github.com/FINTLabs/fint-model/classes"
 	"github.com/FINTLabs/fint-model/common/metamodel"
 	"github.com/FINTLabs/fint-model/generate"
-	"github.com/FINTLabs/fint-model/namespaces"
-	"github.com/FINTLabs/fint-model/packages"
 	"github.com/FINTLabs/fint-model/tags"
 	"github.com/urfave/cli"
 )
@@ -48,12 +45,6 @@ var GlobalFlags = []cli.Flag{
 
 var Commands = []cli.Command{
 	{
-		Name:   "printClasses",
-		Usage:  "list classes",
-		Action: classes.CmdPrintClasses,
-		Flags:  []cli.Flag{},
-	},
-	{
 		Name:   "generate",
 		Usage:  "generates JAVA/CS models",
 		Action: generate.CmdGenerate,
@@ -85,18 +76,6 @@ var Commands = []cli.Command{
 				Usage: "output file path",
 			},
 		},
-	},
-	{
-		Name:   "listPackages",
-		Usage:  "list Java packages",
-		Action: packages.CmdListPackages,
-		Flags:  []cli.Flag{},
-	},
-	{
-		Name:   "listNamespaces",
-		Usage:  "list CS namespaces",
-		Action: namespaces.CmdListNamespaces,
-		Flags:  []cli.Flag{},
 	},
 	{
 		Name:   "listTags",
