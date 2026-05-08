@@ -9,15 +9,19 @@ import (
 	"github.com/FINTLabs/fint-model/common/config"
 	"github.com/FINTLabs/fint-model/common/document"
 	"github.com/FINTLabs/fint-model/common/github"
+	"github.com/FINTLabs/fint-model/common/metamodel"
 	"github.com/FINTLabs/fint-model/common/parser"
 	"github.com/FINTLabs/fint-model/common/types"
 	"github.com/urfave/cli"
 )
 
 func CmdGenerate(c *cli.Context) {
+	fromJSON := c.String("from-json")
+	resource := c.Bool("resource")
+	lang := c.String("lang")
 
 	var tag string
-	if c.GlobalString("tag") == config.DEFAULT_TAG {
+	if fromJSON == "" && c.GlobalString("tag") == config.DEFAULT_TAG {
 		tag = github.GetLatest(c.GlobalString("owner"), c.GlobalString("repo"))
 	} else {
 		tag = c.GlobalString("tag")
@@ -27,19 +31,17 @@ func CmdGenerate(c *cli.Context) {
 	repo := c.GlobalString("repo")
 	filename := c.GlobalString("filename")
 
-	resource := c.Bool("resource")
-
-	if c.String("lang") == "JAVA" {
-		generateJavaCode(owner, repo, tag, filename, force, resource)
+	if lang == "JAVA" {
+		generateJavaCode(owner, repo, tag, filename, force, resource, fromJSON)
 	}
 
-	if c.String("lang") == "CS" {
-		generateCSCode(owner, repo, tag, filename, force, resource)
+	if lang == "CS" {
+		generateCSCode(owner, repo, tag, filename, force, resource, fromJSON)
 	}
 
-	if c.String("lang") == "ALL" {
-		generateCSCode(owner, repo, tag, filename, force, resource)
-		generateJavaCode(owner, repo, tag, filename, force, resource)
+	if lang == "ALL" {
+		generateCSCode(owner, repo, tag, filename, force, resource, fromJSON)
+		generateJavaCode(owner, repo, tag, filename, force, resource, fromJSON)
 	}
 }
 
@@ -58,12 +60,26 @@ func writeJavaClass(pkg string, class string, content []byte) error {
 	return writeFile(removeJavaPackagePathFromFilePath(path), class+".java", []byte(content))
 }
 
-func generateJavaCode(owner string, repo string, tag string, filename string, force bool, resource bool) {
+func generateJavaCode(owner string, repo string, tag string, filename string, force bool, resource bool, fromJSON string) {
 
-	document.Get(owner, repo, tag, filename, force)
-	fmt.Println("Generating Java code:")
+	var classes []*types.Class
+	var packageClassMap map[string][]*types.Class
+
+	if fromJSON != "" {
+		fmt.Printf("Generating Java code from %s\n", fromJSON)
+		doc, err := metamodel.Load(fromJSON)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "ERROR: load %s: %v\n", fromJSON, err)
+			os.Exit(1)
+		}
+		classes, packageClassMap, _ = metamodel.ToClasses(doc)
+		tag = doc.FintVersion
+	} else {
+		document.Get(owner, repo, tag, filename, force)
+		fmt.Println("Generating Java code:")
+		classes, _, packageClassMap, _ = parser.GetClasses(owner, repo, tag, filename, force)
+	}
 	setupJavaDirStructure(owner, repo, tag, filename, force)
-	classes, _, packageClassMap, _ := parser.GetClasses(owner, repo, tag, filename, force)
 	for _, c := range classes {
 		if resource {
 			if c.Resource || len(c.Resources) > 0 || c.Identifiable {
@@ -134,12 +150,26 @@ func writeCSClass(namespace string, class string, content []byte, resource bool)
 	return writeFile(getCSPath(namespace, resource), class+".cs", []byte(content))
 }
 
-func generateCSCode(owner string, repo string, tag string, filename string, force bool, resource bool) {
+func generateCSCode(owner string, repo string, tag string, filename string, force bool, resource bool, fromJSON string) {
 
-	document.Get(owner, repo, tag, filename, force)
-	fmt.Println("Generating CSharp code:")
+	var classes []*types.Class
+	var packageClassMap map[string][]*types.Class
+
+	if fromJSON != "" {
+		fmt.Printf("Generating CSharp code from %s\n", fromJSON)
+		doc, err := metamodel.Load(fromJSON)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "ERROR: load %s: %v\n", fromJSON, err)
+			os.Exit(1)
+		}
+		classes, _, packageClassMap = metamodel.ToClasses(doc)
+		tag = doc.FintVersion
+	} else {
+		document.Get(owner, repo, tag, filename, force)
+		fmt.Println("Generating CSharp code:")
+		classes, _, _, packageClassMap = parser.GetClasses(owner, repo, tag, filename, force)
+	}
 	setupCSDirStructure(owner, repo, tag, filename, force)
-	classes, _, _, packageClassMap := parser.GetClasses(owner, repo, tag, filename, force)
 	for _, c := range classes {
 
 		if resource {

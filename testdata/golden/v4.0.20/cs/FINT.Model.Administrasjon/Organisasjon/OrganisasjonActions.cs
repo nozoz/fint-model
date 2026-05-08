@@ -1,0 +1,15 @@
+using System;
+
+namespace FINT.Model.Administrasjon.Organisasjon
+{
+	public enum OrganisasjonActions
+    {
+	
+	GET_ARBEIDSLOKASJON,
+	GET_ALL_ARBEIDSLOKASJON,
+	UPDATE_ARBEIDSLOKASJON,
+	GET_ORGANISASJONSELEMENT,
+	GET_ALL_ORGANISASJONSELEMENT,
+	UPDATE_ORGANISASJONSELEMENT
+    }
+}

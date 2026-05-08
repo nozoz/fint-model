@@ -6,6 +6,7 @@ import (
 
 	"github.com/FINTLabs/fint-model/branches"
 	"github.com/FINTLabs/fint-model/classes"
+	"github.com/FINTLabs/fint-model/common/metamodel"
 	"github.com/FINTLabs/fint-model/generate"
 	"github.com/FINTLabs/fint-model/namespaces"
 	"github.com/FINTLabs/fint-model/packages"
@@ -66,6 +67,22 @@ var Commands = []cli.Command{
 				EnvVar: "",
 				Name:   "resource, r",
 				Usage:  "Generate resource classes.",
+			},
+			cli.StringFlag{
+				Name:  "from-json",
+				Usage: "read metamodel.json instead of fetching/parsing EA XMI (JAVA only)",
+			},
+		},
+	},
+	{
+		Name:   "metamodel",
+		Usage:  "produce canonical metamodel.json from EA XMI",
+		Action: metamodel.CmdMetamodel,
+		Flags: []cli.Flag{
+			cli.StringFlag{
+				Name:  "output, o",
+				Value: "metamodel.json",
+				Usage: "output file path",
 			},
 		},
 	},
