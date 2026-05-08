@@ -1,14 +1,11 @@
 {
   "schemaVersion": "1.0",
   "fintVersion": "v4.0.20",
-  "generatedAt": "2026-05-08T23:35:27Z",
+  "generatedAt": "2026-05-08T23:50:58Z",
   "components": [
     {
       "name": "arkiv-kodeverk",
-      "path": [
-        "Arkiv",
-        "Kodeverk"
-      ],
+      "path": "Arkiv.Kodeverk",
       "types": [
         {
           "name": "DokumentStatus",
@@ -17,10 +14,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk for status til et dokument.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M054\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/dokumentstatus",
           "idFields": [
@@ -87,10 +80,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk for type dokument.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M083\n\nI Noark ble begrepet Dokumentkategori endret til Dokumenttype i versjon 4.\nBegrepet Dokumentkategori brukes i Elements og P360.\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden#!#block-body-2",
           "path": "arkiv/kodeverk/dokumenttype",
           "idFields": [
@@ -157,10 +146,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Dokumentets format.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M701\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n\n* https://arkivverket.metakat.no/Objekttype/Index/EAID_A17DA4C4_5952_4511_B44F_C8CA6A790558\n\n* https://lovdata.no/forskrift/2017-12-19-2286/§5-17 (Godkjente filformater for arkivdokumenter ved avlevering eller deponering).\n\n# Eksempler\n\n* RA-TEKST\n* RA-TIFF6\n* RA-PDF\n* RA-XML\n* RA-JPEG\n* RA-SOSI",
           "path": "arkiv/kodeverk/format",
           "idFields": [
@@ -227,10 +212,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Navn på type journalpost.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M082\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n",
           "path": "arkiv/kodeverk/journalposttype",
           "idFields": [
@@ -297,10 +278,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Status til journalposten, dvs. om dokumentet er registrert, under behandling eller endelig arkivert.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M053\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/journalstatus",
           "idFields": [
@@ -367,10 +344,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk for type klassifikasjonssystem.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M086\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n",
           "path": "arkiv/kodeverk/klassifikasjonstype",
           "idFields": [
@@ -437,10 +410,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk over korrespondansepart typer.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M087\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n",
           "path": "arkiv/kodeverk/korrespondanseparttype",
           "idFields": [
@@ -507,10 +476,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Navn på type merknad\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M084\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/merknadstype",
           "idFields": [
@@ -577,10 +542,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Angivelse av rollen til parten.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M303\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/partrolle",
           "idFields": [
@@ -647,10 +608,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Rollen til en arkivressurs.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M581\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n",
           "path": "arkiv/kodeverk/rolle",
           "idFields": [
@@ -717,10 +674,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Saksmappetyper brukes for å differensiere innhold og etter hvilke rutiner saker skal behandles.\n\nDette er ikke en del av Noark standarden.\n\n# Synonymer\n\u003cul\u003e\n\t\u003cli\u003eSakstype (P360)\u003c/li\u003e\n\u003c/ul\u003e\n\n# Eksempel\n\n* Sak\n* PE\n* TS\n",
           "path": "arkiv/kodeverk/saksmappetype",
           "idFields": [
@@ -787,10 +740,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Status til saksmappen, dvs. hvor langt saksbehandlingen har kommet.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M052\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/saksstatus",
           "idFields": [
@@ -857,10 +806,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Henvisning til hjemmel (paragraf) i offentlighetsloven, sikkerhetsloven eller beskyttelsesinstruksen.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M501\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/skjermingshjemmel",
           "idFields": [
@@ -927,10 +872,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Tilgangsgruppe gir mulighet for å skjerme innhold internt for andre brukere.",
           "path": "arkiv/kodeverk/tilgangsgruppe",
           "idFields": [
@@ -997,10 +938,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Angivelse av at dokumentene som tilhører arkivenheten ikke er offentligtilgjengelig i henhold til offentlighetsloven eller av en annen grunn.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M500\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/tilgangsrestriksjon",
           "idFields": [
@@ -1067,10 +1004,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Angivelse av hvilken \"rolle\" dokumentet har i forhold til registreringen.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M217\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n",
           "path": "arkiv/kodeverk/tilknyttetregistreringsom",
           "idFields": [
@@ -1137,10 +1070,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Angivelse av hvilken variant et dokument forekommer i.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 metadatakatalog - nr. M700\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/kodeverk/variantformat",
           "idFields": [
@@ -1204,10 +1133,7 @@
     },
     {
       "name": "arkiv-personal",
-      "path": [
-        "Arkiv",
-        "Personal"
-      ],
+      "path": "Arkiv.Personal",
       "types": [
         {
           "name": "Personalmappe",
@@ -1216,10 +1142,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Saksmappe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Saksmappe med opplysninger om den enkelte arbeidstakers arbeidsforhold.\n\n# Beskrivelse\n\nOpplysninger i en personalmappe kan være personalia, arbeidskontrakt og annen korrespondanse som berører arbeidsforholdet.\n",
           "path": "arkiv/personal/personalmappe",
           "idFields": [
@@ -1545,10 +1467,7 @@
     },
     {
       "name": "arkiv-samferdsel",
-      "path": [
-        "Arkiv",
-        "Samferdsel"
-      ],
+      "path": "Arkiv.Samferdsel",
       "types": [
         {
           "name": "SoknadDrosjeloyve",
@@ -1557,10 +1476,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Saksmappe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Sak om søknad om løyve (tillatelse til å) kjøre drosje.\n\n# Beskrivelse\n\n Et drosjeløyve er en tillatelse til å transportere mennesker i personbil mot betaling.",
           "path": "arkiv/samferdsel/soknaddrosjeloyve",
           "idFields": [
@@ -1856,10 +1771,7 @@
     },
     {
       "name": "arkiv-kulturminnevern",
-      "path": [
-        "Arkiv",
-        "Kulturminnevern"
-      ],
+      "path": "Arkiv.Kulturminnevern",
       "types": [
         {
           "name": "DispensasjonAutomatiskFredaKulturminne",
@@ -1868,10 +1780,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Saksmappe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Sak om søknad om dispensasjon for tiltak på automatisk freda kulturminne.",
           "path": "arkiv/kulturminnevern/dispensasjonautomatiskfredakulturminne",
           "idFields": [
@@ -2191,10 +2099,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Saksmappe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Sak om søknad om tilskudd til freda fartøy.",
           "path": "arkiv/kulturminnevern/tilskuddfartoy",
           "idFields": [
@@ -2514,10 +2418,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Saksmappe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Sak om søknad om tilskudd til freda bygninger i privat eie (FRIP).",
           "path": "arkiv/kulturminnevern/tilskuddfredabygningprivateie",
           "idFields": [
@@ -2834,10 +2734,7 @@
     },
     {
       "name": "arkiv-noark",
-      "path": [
-        "Arkiv",
-        "Noark"
-      ],
+      "path": "Arkiv.Noark",
       "types": [
         {
           "name": "AdministrativEnhet",
@@ -2846,10 +2743,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Navn på avdeling, kontor eller annen administrativ enhet som har ansvaret for saksbehandlingen.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 4.2\n* Noark 5 versjon 5.0 metadatakatalog - nr. M086\n\n# Referanser\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/noark/administrativenhet",
           "idFields": [
@@ -2907,10 +2800,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "En vilkårlig definert del av et arkiv. Et arkiv skal kunne deles opp i arkivdeler for å gruppere arkivet etter overordnede kriterier. \n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.3\n\n# Referanser \n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n",
           "path": "arkiv/noark/arkivdel",
           "idFields": [
@@ -2961,10 +2850,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Ansatt med rolle og rettigheter innen arkiv.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 4.3\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/noark/arkivressurs",
           "idFields": [
@@ -3039,10 +2924,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Siling av hva en individuell pålogget bruker faktisk får lov til å gjøre i løsningen.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 4.5 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n",
           "path": "arkiv/noark/autorisasjon",
           "idFields": [
@@ -3103,10 +2984,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "En Journalpost av typen ”inngående dokument” eller ”organinternt dokument for oppfølging” står i restanse inntil de er markert som ferdigbehandlet, eller avskrives. Det følger av arkivforskriften \u0026#167; 10 at avskrivningsmåte skal fremgå av journalen.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppfølging  \n\n# Referanser \n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -3151,10 +3028,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Den vanligste bruken av \u003ci\u003edokumentbeskrivelse \u003c/i\u003eer for å skille mellom hoveddokument og vedlegg, hvor hoveddokumentet og hvert av vedleggene utgjør hvert sitt enkeltdokument.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.7 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden\n\n\n\n",
           "path": null,
           "idFields": null,
@@ -3320,10 +3193,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Dokumentfila inneholder selve dokumentet. Dersom dokumentet er arkivert i flere versjoner, må vi ha et dokumentobjekt og en dokumentfil for hver versjon.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.7 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/noark/dokumentfil",
           "idFields": [
@@ -3380,10 +3249,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Dokumentobjekt skal referere til \u0026#233;n og kun en dokumentfil. Dokumentfila inneholder selve dokumentet.",
           "path": null,
           "idFields": null,
@@ -3489,10 +3354,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Registrering",
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "En journalpost representer en \"innføring i journalen\". Journalen er en kronologisk fortegnelse over inn- og utgående dokumenter (dvs. korrespondansedokumenter) brukt i saksbehandlingen, og eventuelt også interne dokumenter.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.6 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -3858,10 +3719,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Et klassifikasjonssystem er bygd opp av klasser. \n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.4\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -3927,10 +3784,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Beskriver den overordnede strukturen for mappene i en eller flere arkivdeler.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.4 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/noark/klassifikasjonssystem",
           "idFields": [
@@ -4051,10 +3904,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Virksomhet eller person som arkivskaper mottar eller sender arkivdokumenter til.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.6 \n\n# Referanser \n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -4150,10 +3999,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "En mappe grupperer dokumenter som på en eller annen måte hører sammen.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.5 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": [
@@ -4322,10 +4167,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Merknader knyttet til mappe, registrering eller dokumentbeskrivelse.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.8.4 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -4381,10 +4222,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Part til Mappe, Registrering eller Dokumentbeskrivelse.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.8.5\n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -4470,10 +4307,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "En registrering utgjør arkivets primære byggeklosser.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.6 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -4699,10 +4532,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Saksmappe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Generisk sak.\n\n",
           "path": "arkiv/noark/sak",
           "idFields": [
@@ -4981,10 +4810,6 @@
           "deprecated": false,
           "parent": "arkiv-noark:Mappe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Spesialisering av Mappe som tilsvarer en ”sak” i Noark.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.5 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": [
@@ -5263,10 +5088,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Skjerming benyttes til å skjerme registrerte opplysninger eller enkeltdokumenter. Skjermingen trer i kraft når en tilgangskode påføres den enkelte mappe, registrering eller det enkelte dokument.\n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 2.8.1 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": null,
           "idFields": null,
@@ -5301,10 +5122,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Styring av hvem som har tilgang til hvilke opplysninger. \n\n# Beskrivelse\n\n* Noark 5 versjon 5.0 standard - kap. 4 \n\n# Referanser\n\n* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden",
           "path": "arkiv/noark/tilgang",
           "idFields": [
@@ -5382,10 +5199,7 @@
     },
     {
       "name": "okonomi-faktura",
-      "path": [
-        "Okonomi",
-        "Faktura"
-      ],
+      "path": "Okonomi.Faktura",
       "types": [
         {
           "name": "Faktura",
@@ -5394,10 +5208,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Betalingskrav som er utformet og oversendt fra fakturautsteder til fakturamottaker. \n\n# Beskrivelse\n\nFaktura opprettes med basis i ett fakturagrunnlag og ustedes til en eller flere mottakere.",
           "path": "okonomi/faktura/faktura",
           "idFields": [
@@ -5528,10 +5338,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Grunnlag for fakturering.\n\n# Beskrivelse\n\nDokumentasjon som danner grunnlag for å fakturere en kunde.\n\nBeskriver hvem som skal utstede faktura og dermed motta betaling, hvem som skal faktureres, og hvilke varer det skal faktureres for.",
           "path": "okonomi/faktura/fakturagrunnlag",
           "idFields": [
@@ -5645,10 +5451,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Del av Fakturagrunnlag som beskriver en enkelt vare.\n\n# Beskrivelse\n\nInneholder referanse til vare i et vareregister.",
           "path": null,
           "idFields": null,
@@ -5704,10 +5506,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Aktør som skal betale faktura. \n\n# Beskrivelse\n\nMottaker er, per i dag, alltid en person.\n\n",
           "path": null,
           "idFields": null,
@@ -5732,10 +5530,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Enhet som utformer og oversender faktura og mottar betaling.\n\n# Beskrivelse\n\nEnhet som etter Regnskapsloven er pliktig å arkivere dokumentasjon for faktura.\n",
           "path": "okonomi/faktura/fakturautsteder",
           "idFields": [
@@ -5806,10 +5600,7 @@
     },
     {
       "name": "okonomi-kodeverk",
-      "path": [
-        "Okonomi",
-        "Kodeverk"
-      ],
+      "path": "Okonomi.Kodeverk",
       "types": [
         {
           "name": "Merverdiavgift",
@@ -5818,10 +5609,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk for merverdiavgifter.",
           "path": "okonomi/kodeverk/merverdiavgift",
           "idFields": [
@@ -5898,10 +5685,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Vare eller tjeneste som kan leveres og faktureres.\n\n# Beskrivelse\n\nVarer leveres i en mengde beskrevet i en enhet, til en nettopris per enhet.  Til hver vare er det tilknyttet en kode som angir sats for merverdiavgift.\n\nKonteringen som varen har i økonomisystemet kan også angis.",
           "path": "okonomi/kodeverk/vare",
           "idFields": [
@@ -6019,10 +5802,7 @@
     },
     {
       "name": "okonomi-regnskap",
-      "path": [
-        "Okonomi",
-        "Regnskap"
-      ],
+      "path": "Okonomi.Regnskap",
       "types": [
         {
           "name": "Bilag",
@@ -6031,10 +5811,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Dokumentasjon til en transaksjon.",
           "path": null,
           "idFields": null,
@@ -6109,10 +5885,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Person eller virksomhet som leverer produkter eller tjenester.",
           "path": "okonomi/regnskap/leverandor",
           "idFields": [
@@ -6191,10 +5963,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Gruppering av leverandører.",
           "path": "okonomi/regnskap/leverandorgruppe",
           "idFields": [
@@ -6242,10 +6010,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Føring på en konto i regnskapet.",
           "path": "okonomi/regnskap/postering",
           "idFields": [
@@ -6316,10 +6080,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Overføring av penger til eller fra eksterne parter.",
           "path": "okonomi/regnskap/transaksjon",
           "idFields": [
@@ -6447,10 +6207,7 @@
     },
     {
       "name": "personvern-kodeverk",
-      "path": [
-        "Personvern",
-        "Kodeverk"
-      ],
+      "path": "Personvern.Kodeverk",
       "types": [
         {
           "name": "Behandlingsgrunnlag",
@@ -6459,10 +6216,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Rettslig grunnlag for behandling av personopplysninger.\n\n# Beskrivelse\n\nAll behandling av personopplysninger må ha et rettslig grunnlag for å være lov. Det må finnes et behandlingsgrunnlag for behandling av hver enkelt personopplysning til hvert enkelt formål.\n\nVirksomheten har også plikt til å informere den enkelte om hvilket grunnlag  personopplysningene deres behandles på. \n\n# Eksempler\n\n* Samtykke\n* Nødvendig for å oppfylle en avtale\n* Nødvendig for å oppfylle en rettslig plikt\n* Nødvendig for å beskytte vitale interesser\n* Nødvendig for å utføre en oppgave i offentlig interesse eller utøve offentlig myndighet\n* Nødvendig for å ivareta legitime interesser - interesseavveiing\n",
           "path": "personvern/kodeverk/behandlingsgrunnlag",
           "idFields": [
@@ -6529,10 +6282,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Opplysninger og vurderinger som kan knyttes til enkeltpersoner.\n\n# Beskrivelse\n\nTypiske personopplysninger er navn, adresse, telefonnummer, e-post og fødselsnummer. Et bilde regnes som en personopplysning dersom personer kan gjenkjennes. \n\n# Referanser\n\nPersonvernforordningen artikkel 4\n\n\n\n\n\n",
           "path": "personvern/kodeverk/personopplysning",
           "idFields": [
@@ -6596,10 +6345,7 @@
     },
     {
       "name": "personvern-samtykke",
-      "path": [
-        "Personvern",
-        "Samtykke"
-      ],
+      "path": "Personvern.Samtykke",
       "types": [
         {
           "name": "Behandling",
@@ -6608,10 +6354,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "All bruk av personopplysninger\n\n# Beskrivelse\n\nAll bruk av personopplysninger, slik som innsamling, registrering, sammenstilling, lagring og utlevering, eller en kombinasjon av slike bruksmåter.\n\nPersonopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysning samt behandlingsgrunnlaget.",
           "path": "personvern/samtykke/behandling",
           "idFields": [
@@ -6715,10 +6457,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Tillatelse til behandling av personopplysning.\n\n# Beskrivelse\n\nEn virksomhet kan behandle personopplysninger dersom den har innhentet gyldig samtykke fra personen eller personene det gjelder.\n\n\n\n",
           "path": "personvern/samtykke/samtykke",
           "idFields": [
@@ -6799,10 +6537,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Tjeneste eller system som behandler personopplysninger. \n\n# Beskrivelse\n\nTjeneste eller system som behandler personopplysninger må ha et behandlingsgrunnlag og formål for behandling av hver enkelt personopplysning. ",
           "path": "personvern/samtykke/tjeneste",
           "idFields": [
@@ -6860,9 +6594,7 @@
     },
     {
       "name": "felles",
-      "path": [
-        "Felles"
-      ],
+      "path": "Felles",
       "types": [
         {
           "name": "Kontaktperson",
@@ -6871,10 +6603,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Kontaktperson til en person.\n\n# Beskrivelse\n\nKontaktperson er personer som kan kontaktes dersom det er behov for det.\n\nKontaktperson kalles også pårørende.",
           "path": "felles/kontaktperson",
           "idFields": [
@@ -6945,10 +6673,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Aktor",
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": true,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Fysiske private personer\n\n# Beskrivelse\n\nFysiske personer. Arver felter fra [Aktør](Class:Aktør).\n\n# Eksempler\n\n## Riktig\n\n* Karl August Haraldsen\n\n## Feil\n\n* Statsminister\n\n# Referanse\n\n* [Wiki side](https://no.wikipedia.org/wiki/Fysisk_person)\n",
           "path": "felles/person",
           "idFields": [
@@ -7177,10 +6901,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Enhet",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "En juridisk organisasjon som produserer varer eller tjenester.",
           "path": "felles/virksomhet",
           "idFields": [
@@ -7269,10 +6989,7 @@
     },
     {
       "name": "felles-basisklasser",
-      "path": [
-        "Felles",
-        "Basisklasser"
-      ],
+      "path": "Felles.Basisklasser",
       "types": [
         {
           "name": "Aktor",
@@ -7281,10 +6998,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Person eller enhet vi samhandler med.\n\n# Beskrivelse\n\nAbstrakt klasse som inneholder relasjon til kontaktinformasjon og identifikator. Må enten brukes som Person, Enhet, eller annen underliggende klasse, som feks organisasjonselement.\n\n",
           "path": null,
           "idFields": null,
@@ -7319,10 +7032,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Overordnet beskrivelse av et element i et kodeverk\n\n# Beskrivelse\n\n* Overordnet element har ingen forelder\nSjekker ved innhenting av data:\n* Det skal være bare 1 overordnet element i hver kodeverk\n* Det er ingen sykluser definert med forelder forholdet\n\n# Eksempel",
           "path": null,
           "idFields": [
@@ -7389,10 +7098,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Aktor",
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": true,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Alle hovedenheter, underenheter og organisasjonsledd som er identifisert med et organisasjonsnummer\n\n# Beskrivelse\n\nLøs relasjon til BRREG.\n\n\n",
           "path": null,
           "idFields": [
@@ -7456,10 +7161,7 @@
     },
     {
       "name": "felles-kodeverk",
-      "path": [
-        "Felles",
-        "Kodeverk"
-      ],
+      "path": "Felles.Kodeverk",
       "types": [
         {
           "name": "Fylke",
@@ -7468,10 +7170,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Liste over Norges fylker\n\n# Referanser\n\n* \"SSB: Standard for fylkesinndeling\":http://www.ssb.no/klass/#!/klassifikasjoner/104\n* \"data.norge.no\":\nhttp://data.norge.no/data/statistisk-sentralbyr%C3%A5/fylkesinndeling",
           "path": "felles/kodeverk/fylke",
           "idFields": [
@@ -7552,10 +7250,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Liste over Norges kommuner\n\nKilde:\n\n* \"SSB. Kommuneinndeling 2017\":http://www.ssb.no/klass/#!/klassifikasjoner/131\n* \"data.norge.no om kommuneinndeling\":http://data.norge.no/data/statistisk-sentralbyr%C3%A5/kommuneinndeling\n",
           "path": "felles/kodeverk/kommune",
           "idFields": [
@@ -7636,10 +7330,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Valutakodene for offisielle valutaer.\n\n# Referanse\nI henhold til [ISO 4217](https://no.wikipedia.org/wiki/ISO_4217)",
           "path": "felles/kodeverk/valuta",
           "idFields": [
@@ -7684,11 +7374,7 @@
     },
     {
       "name": "felles-kodeverk-iso",
-      "path": [
-        "Felles",
-        "Kodeverk",
-        "ISO"
-      ],
+      "path": "Felles.Kodeverk.ISO",
       "types": [
         {
           "name": "Kjonn",
@@ -7697,10 +7383,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Liste over verdier for kjønn basert på ISO/IEC 5218.\n\n# Beskrivelse\n\nListe over verdier for kjønn basert på ISO/IEC 5218.\n\nNår vi i daglig tale prater om kjønn presiserer vi sjelden hva vi mener. Avhengig av sammenheng kan vi mene enten biologisk, sosialt, mentalt eller juridisk kjønn. Kjønn kan med andre ord betraktes som et samlebegrep.\nKilde: llh.no  \n\n# Referanser\n\n* [FINT API for ISO/IEC 5218](https://api.felleskomponent.no/felles/kodeverk/kjonn)\n* [ISO/IEC 5218:2004](https://iso.org/standard/36266.html)\n* [Wikipedia artikkel](https://en.wikipedia.org/wiki/ISO/IEC_5218)\n\n# Eksempler\n\n    0 = uvisst (not known)\n    1 = mann (male)\n    2 = kvinne (female)\n    9 = gjelder ikke (not applicable)\n",
           "path": "felles/kodeverk/iso/kjonn",
           "idFields": [
@@ -7767,10 +7449,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Landskode i ISO 3166-1 alpha-2 format.\n\n# Beskrivelse\n\nLandskode i ISO 3166-1 alpha-2 format.\n\n# Referanser\n\n* [FINT api for ISO 3166-1 alpha-2](https://api.felleskomponent.no/felles/kodeverk/iso/31661alpha2/)\n* \"ISO standards page\":http://www.iso.org/iso/country_codes.htm\n* Søk i kodeliste: \"https://www.iso.org/obp/ui/#search\":https://www.iso.org/obp/ui/#search\n* \"XML data\":http://www.iso.org/iso/home/standards/country_codes/country_names_and_code_elements_xml-temp.htm\n* \"Wiki side\":https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2\n* \"SSB datasett\":http://data.norge.no/data/statistisk-sentralbyr%C3%A5/land-og-landkoder",
           "path": "felles/kodeverk/iso/landkode",
           "idFields": [
@@ -7837,10 +7515,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Liste over verdier for språk  (2 bokstav)\n\n# Beskrivelse\n\nListe over alle språk etter ISO 639-1 standard (2 bokstav)\n\n# Eksempler\n\nNO, NB, NN, DA, etc.\n\n# Referanse \n\n[FINT api for ISO 639-1 Alpha2](https://api.felleskomponent.no/felles/kodeverk/iso/6391alpha2)",
           "path": "felles/kodeverk/iso/sprak",
           "idFields": [
@@ -7904,10 +7578,7 @@
     },
     {
       "name": "felles-kompleksedatatyper",
-      "path": [
-        "Felles",
-        "Kompleksedatatyper"
-      ],
+      "path": "Felles.Kompleksedatatyper",
       "types": [
         {
           "name": "Adresse",
@@ -7916,10 +7587,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Fysisk adresse eller postadresse.\n\n# Beskrivelse\n\nDette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.\n\n# Eksempel\n\n|               adresse               |    poststed    | postnummer | land |\n|-------------------------------------|----------------|------------|------|\n| Nydalen allé 11                     | Oslo           |       0484 | NO   |\n| Fakturamottak\u0026lt;br\u0026gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |\n| Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |\n\n\n# Referanser\n\n- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge\n- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet\n",
           "path": null,
           "idFields": null,
@@ -7975,10 +7642,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Unik identifikasjon til et objekt.\n\n# Beskrivelse\n\nEn kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.\n\nIdentifikatorer må være stabile over tid, og henvise til samme objekt.\n\nDersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.\n\n# Eksempel\n\nKan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.\n\n* For en person kan det være fødselsnummer\n* For er personresurs kan det være ansattnummer eller signatur\n* For er elev kan det være elevnummer.\n* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.\n* systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.",
           "path": null,
           "idFields": null,
@@ -8013,10 +7676,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Informasjon som kan brukes for oppnå kontakt.\n\n# Beskrivelse\n\nGenerell kontaktinformasjon, inneholder opplysninger om telefon, e-post, osv.\n\nEn ikke-fysisk adresse, i motsetning til [Adresse](/docs/komplekse_datatyper_adresse) .\n\n\n",
           "path": null,
           "idFields": null,
@@ -8081,10 +7740,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.",
           "path": null,
           "idFields": null,
@@ -8160,10 +7815,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Tidsperiode (start- og sluttdato).\n\n# Beskrivelse\n\nTidsperiode (start- og slutttidspunkt). \nSlutttidspunkt må være senere eller lik starttidspunktet om det er definert.\nBåde start og slutt kan brukes som dato eller datotid. \n",
           "path": null,
           "idFields": null,
@@ -8208,10 +7859,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Angir navn til en person\n\n# Beskrivelse\n\nInneholder fornavn og etternavn for å beskrive navn til en person.\n\nFornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.\n\n# Referanse\n\n* [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)\n* [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)\n* [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)\n\n# Eksempler\n\n|            Navn           |       Fornavn       | Mellomnavn | Etternavn   |\n|---------------------------|---------------------|------------|--------------|\n| Ole Olsen                 | Ole                 | -          | Olsen        |\n| Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |\n| Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |\n| Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |\n",
           "path": null,
           "idFields": null,
@@ -8253,10 +7900,7 @@
     },
     {
       "name": "administrasjon-fullmakt",
-      "path": [
-        "Administrasjon",
-        "Fullmakt"
-      ],
+      "path": "Administrasjon.Fullmakt",
       "types": [
         {
           "name": "Fullmakt",
@@ -8265,10 +7909,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.\n\n# Beskrivelse\n\nFullmakter innehas av fysiske eller juridiske personer, og er knyttet til kontodimensjon eller organisasjonselement. Fullmakter er delegert til personer, disse benevnes som fullmektige.\n\nFullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.\n\nFullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.\n\nDersom fullmakt har relasjon til mer enn en kontodimensjon (og organisasjonselement) er det å regne som en kombinasjonsfullmakt. \n\n# Eksempler\n\nRektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.",
           "path": "administrasjon/fullmakt/fullmakt",
           "idFields": [
@@ -8475,10 +8115,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Rettighet eller type fullmakt.\n\nDe vanligste rollene er:\n\n- Attestant\n- Anviser\n- Bestiller\n- Kontering",
           "path": "administrasjon/fullmakt/rolle",
           "idFields": [
@@ -8526,10 +8162,7 @@
     },
     {
       "name": "administrasjon-kodeverk",
-      "path": [
-        "Administrasjon",
-        "Kodeverk"
-      ],
+      "path": "Administrasjon.Kodeverk",
       "types": [
         {
           "name": "Aktivitet",
@@ -8538,10 +8171,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Aktivitet er en del av kontostrengen og er en detaljering av funksjon.",
           "path": "administrasjon/kodeverk/aktivitet",
           "idFields": [
@@ -8608,10 +8237,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Anlegg er en del av kontostrengen og er et objekt som skal aktiveres eller avskrives.",
           "path": "administrasjon/kodeverk/anlegg",
           "idFields": [
@@ -8678,10 +8303,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk som er en del av kontostrengen som beskriver hvem som har ansvaret for en utgift eller en inntekt\n\n# Beskrivelse\n\nAnsvar viser hvordan ansvaret i organisasjonen er bygd opp i samsvar med fylkeskommunens anvisningsmyndighet.\n\nAlternative navn: `Kostsenter`, `Koststed`.",
           "path": "administrasjon/kodeverk/ansvar",
           "idFields": [
@@ -8788,10 +8409,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Viser hvilket behov hos arbeidsgiver som dekkes av arbeidsforholdet\n\n# Beskrivelse\n\nViser hvilket behov hos arbeidsgiver som dekkes av arbeidsforholdet\n\nAlternative navn:\n* Stillingstype\n* Stillingskategori\n* Ansattforholdkode\n\n# Eksempel\n\nKode | Beskrivelse\n---|---\nA   |     Fast\nB    |    Timelønnet\nC   |     Lærlinger\nD   |     Folkevalgt/politiker\nE    |    Midlertidig\n...   | ...\nZ    |    Annet\n",
           "path": "administrasjon/kodeverk/arbeidsforholdstype",
           "idFields": [
@@ -8869,10 +8486,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. \n\n# Beskrivelse\n\nAlternativt navn: Konto\n\nArt er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse. ",
           "path": "administrasjon/kodeverk/art",
           "idFields": [
@@ -8939,10 +8552,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Diverser er en del av kontostrengen og benyttes som et supplement til de spesifikasjoner som framkommer i de øvrige dimensjonene.",
           "path": "administrasjon/kodeverk/diverse",
           "idFields": [
@@ -9009,10 +8618,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kodeverk som detaljerer inntekter og utgifter ved drift",
           "path": "administrasjon/kodeverk/formal",
           "idFields": [
@@ -9079,10 +8684,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Grunn til fravær.\n\n# Eksempel\n\n- Arbeidsrelatert\n- Ikke arbeidsrelatert\n- Svangerskap\n",
           "path": "administrasjon/kodeverk/fravarsgrunn",
           "idFields": [
@@ -9149,10 +8750,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Type fravær.\n\n# Beskrivelse\n\nInneholder informasjon om hva slags type fravær det er som registreres, eksempelvis ferie, permisjon eller sykdom.\n\nTypen fravær brukes av HRM-systemet til å bestemme om fraværet har lønnskonsekvens, hvilken lønnsart som i så fall skal brukes, og om den er knyttet til en permisjon.\n\n# Eksempel\n\n- Egenmelding\n- Syk med legemelding\n- Barn og/ eller barnepassers sykdom\n- Ferie med lønn\n- Velferdspermisjon med lønn\n- Utdanningspermisjon med lønn\n- Utdanningspermisjon uten lønn\n- Foreldrepermisjon 100%\n- Foreldrepermisjon 80 %\n- Avspasering\n- Møter\n- Kurs\n",
           "path": "administrasjon/kodeverk/fravarstype",
           "idFields": [
@@ -9240,10 +8837,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Del av kontostrengen som beskriver hva som produseres\n\n# Beskrivelse\n\nFunksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.\n\nAlternativ navn: `Tjeneste`",
           "path": "administrasjon/kodeverk/funksjon",
           "idFields": [
@@ -9337,10 +8930,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Abstrakt fellesbegrep som beskriver dimensjon i kontoplan.\n\n# Beskrivelse\n\nFellesbenevnelse for dimensjoner i en kontoplan.",
           "path": null,
           "idFields": [
@@ -9407,10 +8996,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kontrakt transaksjonen er knyttet til.",
           "path": "administrasjon/kodeverk/kontrakt",
           "idFields": [
@@ -9477,10 +9062,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Type ytelse.\n\n# Beskrivelse\n\nLønnsart brukes av HRM-systemer for å indikere hvordan en ytelse skal behandles.\n\nDen inneholder også knytning til hvordan ytelsen skal rapporteres på A-meldingen.\n\nTidligere hadde lønnsart knytning til LTO-kode og LT-kode.\n\n# Referanser\n\n* Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm\n* Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/",
           "path": "administrasjon/kodeverk/lonnsart",
           "idFields": [
@@ -9568,10 +9149,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Løpenummer i en nummerserie.",
           "path": "administrasjon/kodeverk/lopenummer",
           "idFields": [
@@ -9638,10 +9215,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Et bygg, en vei eller en bestemt mottaker av en tjeneste eller et tilskudd m.m.",
           "path": "administrasjon/kodeverk/objekt",
           "idFields": [
@@ -9708,10 +9281,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Typen til et organisasjonselement.\n\n# Eksempler\n\n- Virksomhet\n- Klinikk\n- Seksjon\n- Avdeling\n- Team\n- Divisjon\n- Stab\n- Skolegruppe",
           "path": "administrasjon/kodeverk/organisasjonstype",
           "idFields": [
@@ -9778,10 +9347,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Ansattform til et arbeidsforhold\n\n# Beskrivelse\n\nAlternativ navn:\n* Ansatt (er ikke datatype, men kodeverk)\n* Ansattkategori\n* Ansattformer\"\n\n# Eksempel\n\n## Eksempel fra Visma HR - Kategori:\n\nKode | Beskrivelse\n---|---\nF | Fast\nM | Midlertidig\nO | Oppdragstaker\nP | Politiker\nS | Sluttet\n\n## Eksempel fra Agresso - Ressurstype:\n\nKode  |\tBeskrivelse\n---|---\n1 |\tAnsatt - kommunal\n10 |\tLærling/Ung arb.taker\n2 |\tAnsatt - undervisning\n3 |\tHonorar/godtgjørelse\n4 |\tSluttet\n5 |\tNyansatt\n6 |\tIkke ansatt - kun bruker\n7 |\tPolitikere\n8| \tSelvstendig næringsdrivende\n",
           "path": "administrasjon/kodeverk/personalressurskategori",
           "idFields": [
@@ -9848,10 +9413,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Del av kontostrengen som peker på løpende prosjekter.",
           "path": "administrasjon/kodeverk/prosjekt",
           "idFields": [
@@ -9932,10 +9493,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Prosjektart er et element i enten en prosjektnedbrytningsstruktur eller en arbeidsnedbrytningsstruktur.\n\n# Prosjektnedbrytningsstruktur (PNS)\n\nEngelsk: Project Breakdown Structure (PBS)\n\nDet fokuseres på delprodukter:\n\n* Delprodukt\n* Delprosjekt\n\n# Arbeidsnedbrytningsstruktur\n\nEngelsk: Work Breakdown Structure (WBS)\n\nDet fokuseres på arbeidsoppgaver:\n\n* Arbeidspakke\n* Oppgave\n* Deloppgave\n\n# Lenker\n\n* [En enkel oppskrift på en arbeidsnedbrytningsstruktur ](https://www.prosjektbloggen.no/en-enkel-oppskrift-pa-en-arbeidsnedbrytningsstruktur)\n* [Prosjektnedbrytningsstruktur(PNS/WBS)](http://ledelsesspire.blogspot.com/2013/10/prosjektnedbrytningsstruktur-pnswbs.html)",
           "path": "administrasjon/kodeverk/prosjektart",
           "idFields": [
@@ -10042,10 +9599,6 @@
           "deprecated": false,
           "parent": "administrasjon-kodeverk:Kontodimensjon",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Ramme er en del av kontostrengen og viser hvilken budsjettramme som skal bære kostnadene.",
           "path": "administrasjon/kodeverk/ramme",
           "idFields": [
@@ -10112,10 +9665,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Et felles kodeverk for stillinger\n\n# Beskrivelse\n\nI det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.\n",
           "path": "administrasjon/kodeverk/stillingskode",
           "idFields": [
@@ -10193,10 +9742,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Timer per uke i 100 % stilling\n\n# Beskrivelse\n\n# Eksempel\n\n## Eksempel fra Agresso - Arbeidsplan:  \n\nKode   |     Beskrivelse\n---|---\n33,6   |     33,6 timers uke\n34,0    |    34,0 timers uke\n34,5     |   34,5 timers uke\n35,0     |   35,0 timers uke\n35,5     |   35,5 timers uke\n36,0     |   36,0 timers uke\n37,5     |   37,5 timers uke\n...    | ...\n\n",
           "path": "administrasjon/kodeverk/uketimetall",
           "idFields": [
@@ -10260,10 +9805,7 @@
     },
     {
       "name": "administrasjon-organisasjon",
-      "path": [
-        "Administrasjon",
-        "Organisasjon"
-      ],
+      "path": "Administrasjon.Organisasjon",
       "types": [
         {
           "name": "Arbeidslokasjon",
@@ -10272,10 +9814,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Enhet",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Fysisk lokasjon hvor en ansatt har sitt arbeidssted.",
           "path": "administrasjon/organisasjon/arbeidslokasjon",
           "idFields": [
@@ -10377,10 +9915,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Enhet",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Et element i organisasjonsstrukturen\n\n# Beskrivelse\n\nInnslagspunkt i organisasjonsstrukturen. Organisasjonselement er en avdeling/seksjon/enhet, som inneholder relasjon til leder. \n\nFlere organisasjonselement bygger hierarki med relasjon til orverordnet organisasjonselement, som former organisasjonsstrukturen.\n\n# Eksempler\n\n|     OrgKode     | OrgId |             Beskrivelse              | overordenetId |\n|-----------------|---------|--------------------------------------|-----------------|\n| F12             |      25 | OPPL Opplæringsavdelingen            |               0 |\n| F12.10          |      28 | OPPL Videregående opplæring          |              25 |\n| F12.10.44       |      39 | ASKI Askim vgs                       |              28 |\n| F12.10.44.50.15 |      52 | ASKI Internasjonalisering og eksamen |              39 |\n| F12.10.44.50.15 |      55 | ASKI FG Idrett                       |              52 |\n| F12.10.44.10    |      70 | ASKI Personal- og renholdsstab       |              39 |",
           "path": "administrasjon/organisasjon/organisasjonselement",
           "idFields": [
@@ -10579,10 +10113,7 @@
     },
     {
       "name": "administrasjon-personal",
-      "path": [
-        "Administrasjon",
-        "Personal"
-      ],
+      "path": "Administrasjon.Personal",
       "types": [
         {
           "name": "Fastlonn",
@@ -10591,10 +10122,6 @@
           "deprecated": false,
           "parent": "administrasjon-personal:Lonn",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Informasjon om fast lønnsbeskjeftigelse.\n\nInneholder beskjeftigelse av den ansattes lønnsprosent.\n\nSummen av prosentene på beskjeftigelsene skal være lønnsprosent for en fullt dekket stilling.\n\nDersom beskjeftigelsene ikke fyller lønnsprosenten har arbeidsforholdet teknisk undertid. \n\nI motsatt fall har arbeidsforholdet overtid.\n\n# Lovlige endringer\n\n## Opprettelse av ny fastlønn\n\n- `periode` angir periode som beskjeftigelsen skal gjelde for.  \n- Periode uten `slutt` betyr at beskjeftigelsen gjelder inntil videre.\n\n## Endring av eksisterende fastlønn\n\n- Kun endring av `slutt` på `periode` er lovlig.\n\n## Sletting av eksisterende fastlønn\n\n- Ikke tillatt.",
           "path": "administrasjon/personal/fastlonn",
           "idFields": [
@@ -10766,10 +10293,6 @@
           "deprecated": false,
           "parent": "administrasjon-personal:Lonn",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Faste tillegg til utbetaling.\n\n# Lovlige endringer\n\n## Opprettelse av nytt fasttillegg\n\n- `periode` angir periode som tillegget skal gjelde for.  \n- Periode uten `slutt` betyr at tillegget gjelder inntil videre.\n\n## Endring av eksisterende fasttillegg\n\n- Kun endring av `slutt` på `periode` er lovlig.\n- Setting av `slutt` indikerer når tillegget ikke lenger skal utbetales\n\n## Sletting av eksisterende fasttillegg\n\n- Ikke tillatt.",
           "path": "administrasjon/personal/fasttillegg",
           "idFields": [
@@ -10941,10 +10464,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Fravær fra et arbeidsforhold.\n\n# Beskrivelse\n\nRepresenterer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.",
           "path": "administrasjon/personal/fravar",
           "idFields": [
@@ -11082,10 +10601,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Informasjon om lønn for et arbeidsforhold.\n\n# Beskrivelse\n\nLønn inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn, Fasttillegg  eller Variabellønn.\n\nLønn blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.\n\nLønn utbetales til et arbeidsforhold, for en gitt periode.",
           "path": null,
           "idFields": [
@@ -11224,10 +10739,6 @@
           "deprecated": false,
           "parent": "administrasjon-personal:Lonn",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": true,
           "documentation": "Informasjon om variabel lønn.\n\n# Beskrivelse\n\nVariabel lønn består av ett eller flere tillegg, hver knyttet til en lønnsart.  Lønnsart bestemmer eventuelle faste satser for tillegget, samt grunnlag for skatt- og pensjonstrekk, og hvordan det rapporteres på A-meldingen.\n\nSelve beregningen av variabel lønn gjøres av HRM, og formålet er å overføre tilstrekkelig informasjon til at HRM kan foreta beregningen.\n\nMå brukes sammen med lønnsart for at HRM-systemet skal foreta korrekt beregning og rapportere riktig på A-meldingen.\n\n# Eksempler:\n\n1. Vikartime for undervisningspersonell: \n  - antall: antall timer * 1400 / årsramme\n2. Timelønn\n  - antall: antall timer\n3. Kjøregodtgjørelse\n  - antall: antall kilometer\n4. Kontantytelse for et møte\n  - antall: beløp\n\n# Lovlige endringer\n\n## Opprettelse av ny variabelllønn\n\n- `periode` angir periode hvor variabellønn skal utbetales.  \n- `opptjent` må benyttes dersom lønn ble opptjent i en annen utbetalingsperiode.\n\n## Endring av eksisterende variabellønn\n\n- Ikke tillatt.\n\n## Sletting av eksisterende variabellønn\n\n- Ikke tillatt.",
           "path": "administrasjon/personal/variabellonn",
           "idFields": [
@@ -11409,10 +10920,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Arbeidstaker eller oppdragstaker i organisasjonen\n\n# Beskrivelse\n\nPersonalressurs er personer som leverer tjenester i form av å være ansatt. Personalressursen kan også være en person fra vikarbyrå, eller et firma som bekler et arbeidsforhold gjennom en kontrakt/avtale. Registrert i HR-systemet.\n\n# Eksempler\n\n* *ordinære* ansatte i faste og midlertidige stillinger\n* oppdragstakere: \n  * politikere\n  * ressurser med timelønn\n  * sensorer\n  * eksamensvakt\n  * hospitant\n\nInneholder i utgangspunktet ikke *leverandørrepresenanter* (ekstern vikar, foredragsholdere, konsulenter).",
           "path": "administrasjon/personal/personalressurs",
           "idFields": [
@@ -11603,10 +11110,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Arbeidsforhold er et avtaleforhold mellom personalressurs og arbeidsgiver\n\n# Beskrivelse\n\nArbeidsforhold defineres som et avtaleforhold hvor den ene part (arbeidstakeren / personalressurs) forplikter seg til å utføre arbeid for den annen part (arbeidsgiveren / organisasjonselement). Arbeidsforholdet kan også utføres av en person fra vikarbyrå, eller et firma gjennom en kontrakt/avtale.\n\n# Eksempler\n\n* Ansatt som rådgiver i fast stilling\n* Vikariat for en annen person som er i permisjon fra sitt arbeidsforhold",
           "path": "administrasjon/personal/arbeidsforhold",
           "idFields": [
@@ -11988,10 +11491,7 @@
     },
     {
       "name": "administrasjon-kompleksedatatyper",
-      "path": [
-        "Administrasjon",
-        "Kompleksedatatyper"
-      ],
+      "path": "Administrasjon.Kompleksedatatyper",
       "types": [
         {
           "name": "Kontostreng",
@@ -12000,10 +11500,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Sammensetning av kontodimensjoner for bokføring\n\n# Beskrivelse\n\nHenvisninger til koder i alle kontodimensjoner for kontering av en kostnad eller inntekt.\n\n",
           "path": null,
           "idFields": null,
@@ -12145,10 +11641,7 @@
     },
     {
       "name": "utdanning-larling",
-      "path": [
-        "Utdanning",
-        "Larling"
-      ],
+      "path": "Utdanning.Larling",
       "types": [
         {
           "name": "AvlagtProve",
@@ -12157,10 +11650,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Informasjon om en avlagt prøve for en person i et fag.",
           "path": "utdanning/larling/avlagtprove",
           "idFields": [
@@ -12251,10 +11740,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Å være lærling betyr at du utdanner deg til et yrke ved å jobbe i en bedrift. ",
           "path": "utdanning/larling/larling",
           "idFields": [
@@ -12348,10 +11833,7 @@
     },
     {
       "name": "utdanning-ot",
-      "path": [
-        "Utdanning",
-        "OT"
-      ],
+      "path": "Utdanning.OT",
       "types": [
         {
           "name": "OtUngdom",
@@ -12360,10 +11842,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Oppfølgingstjenesten (OT) har ansvar for å følge opp ungdom med rett til videregående opplæring som ikke er i opplæring eller arbeid.",
           "path": "utdanning/ot/otungdom",
           "idFields": [
@@ -12431,10 +11909,7 @@
     },
     {
       "name": "utdanning-elev",
-      "path": [
-        "Utdanning",
-        "Elev"
-      ],
+      "path": "Utdanning.Elev",
       "types": [
         {
           "name": "Elev",
@@ -12443,10 +11918,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Informasjon om en person som mottar undervisning.\n\n# Beskrivelse \n\nBeskriver informasjon relatert til undervisning for en Person.\n\nTilsvarende finnes for ansatte: __Personalressurs__.",
           "path": "utdanning/elev/elev",
           "idFields": [
@@ -12563,10 +12034,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Utdanningsforhold",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Elevens forskjellige utdanningsforhold\n\n# Beskrivelse\n\nEn Elev kan ha flere Elevforhold.\n\n# Eksempel\n\nEn elev kan være i elevforhold med status privatist og deltid samtidig. Eller en elev kan ha flere elevforhold på flere forskjellige skoler.",
           "path": "utdanning/elev/elevforhold",
           "idFields": [
@@ -12850,10 +12317,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Tilrettelegging en elev har på eksamen.\n\nDet skal her oppgis enten fag eller eksamensform.\n\n# Referanse\n\n[Registrere tilretteleggingstype for eksamen](https://inschool.zendesk.com/hc/no/articles/360031198011-5a-02-Registrere-tilretteleggingstype-for-eksamen)\n",
           "path": "utdanning/elev/elevtilrettelegging",
           "idFields": [
@@ -12927,10 +12390,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Elevgruppe som definert i Opplæringslova \u0026#167;8-2. \n\n# Beskrivelse\n\nI opplæringa skal elevane delast i klassar eller basisgrupper som skal vareta deira behov for sosialt tilhør. For delar av opplæringa kan elevane delast i andre grupper etter behov. Til vanleg skal organiseringa ikkje skje etter fagleg nivå, kjønn eller etnisk tilhør. Klassane, basisgruppene og gruppene må ikkje vere større enn det som er pedagogisk og tryggleiksmessig forsvarleg.\n\nKlassen eller basisgruppa skal ha ein eller fleire lærarar (kontaktlærarar) som har særleg ansvar for dei praktiske, administrative og sosialpedagogiske gjeremåla som gjeld klassen eller basisgruppa og dei elevane som er der, mellom anna kontakten med heimen.\n\nBegrepet som har tildligere vært kjent som \"klasse\".\n\n\"Vanlig\" gruppe i SATS (klassegruppe)\n\nViser informasjon om:\n* År på VGS person går i\n* Programområdet\n* A, B eller C klasse\n\nSynonym:\n* Klasse\n\nØvre grense er beskrevet i Opplæringslova \u0026#167;8-3 eller i forskrift.",
           "path": "utdanning/elev/klasse",
           "idFields": [
@@ -13063,10 +12522,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppemedlemskap",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i klasser.\n\n# Beskrivelse\n\nGruppemedlemskap som knytter sammen elevforhold og klasser.",
           "path": "utdanning/elev/klassemedlemskap",
           "idFields": [
@@ -13130,10 +12585,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Elevgruppe som ein kontaktlærer har særleg ansvar for.\n\n# Beskrivelse\n\nKontaktlæreren har i denne gruppa særleg ansvar for dei praktiske, administrative og sosialpedagogiske gjeremåla som gjeld klassen eller basisgruppa og dei elevane som er der, mellom anna kontakten med heimen, jf Opplæringslova §8-2.",
           "path": "utdanning/elev/kontaktlarergruppe",
           "idFields": [
@@ -13253,10 +12704,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppemedlemskap",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i kontaktlærergrupper.\n\n# Beskrivelse\n\nGruppemedlemskap som knytter sammen elevforhold og kontaktlærergrupper.",
           "path": "utdanning/elev/kontaktlarergruppemedlemskap",
           "idFields": [
@@ -13320,10 +12767,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Gruppe av personer som ikke handler om undervisning. Dette kan f.eks. være grupper av elever som skal faktureres.",
           "path": "utdanning/elev/persongruppe",
           "idFields": [
@@ -13444,10 +12887,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppemedlemskap",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i persongruppe.\n\n# Beskrivelse\n\nGruppemedlemskap som knytter sammen personer.\n",
           "path": "utdanning/elev/persongruppemedlemskap",
           "idFields": [
@@ -13511,10 +12950,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Ansatte på en skole.\n\n# Beskrivelse\n\nKan være undervisningspersonell eller andre administrativt ansatte.",
           "path": "utdanning/elev/skoleressurs",
           "idFields": [
@@ -13615,10 +13050,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Utdanningsforhold",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Undervisningsforhold til alle med en pedagogisk funksjon\n\n# Beskrivelse \n\nAlle med en pedagogisk funksjon på skolen kan ha et undervisningsforhold.\n\n# Eksempel\n\nDette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser en lærer på to skoler, vil det være naturlig å ha to undervisningsforhold.",
           "path": "utdanning/elev/undervisningsforhold",
           "idFields": [
@@ -13770,10 +13201,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Varsel sendt til en elev.\n\n# Referanse\n\n* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)\n* [Forskrift til opplæringslova - \u0026#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)",
           "path": "utdanning/elev/varsel",
           "idFields": [
@@ -13871,10 +13298,7 @@
     },
     {
       "name": "utdanning-timeplan",
-      "path": [
-        "Utdanning",
-        "Timeplan"
-      ],
+      "path": "Utdanning.Timeplan",
       "types": [
         {
           "name": "Eksamen",
@@ -13883,10 +13307,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "En eksamen som avholdes på en skole.",
           "path": "utdanning/timeplan/eksamen",
           "idFields": [
@@ -13980,10 +13400,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Emneområde i utdanning i henhold til læreplanverket.\n\n# Beskrivelse\n\nUtdanning gjennomføres i form av fag. Fag i videregående utdanning har en fagtype og en fagkode. Begge er definert i VIGO og Grep kodeverk.  For føring på vitnemål kan kun fagkoder fastsatt av Utdanningsdirektoratet benyttes.\n\nFag og fagkoder kan slås opp hos Utdanningsdirektoratet på https://www.udir.no/laring-og-trivsel/lareplanverket/finn-fagkode/\n\nFagkoder er også beskrevet i [Registreringshåndboken A04](http://regbok.udir.no/35004/3344/35042-1014304.html).\n\n# Fagtyper\n\nFag grupperes etter  [Rundskriv Udir-01-2017](https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Innhold-i-opplaringen/udir-01-2017/) og skriv fra Utdanningsdirektoratet om [Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 2.5](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/2-oppsett-av-vitnemal-og-kompetansebevis/#2.5-rekkefolge-for-foring-av-fag-og-fagtyper).\n\nDe aktuelle fagtypene i henhold til [Registreringshåndboken A05](http://regbok.udir.no/35004/3344/35042-1014305.html) er:\n\n- Fellesfag\n- Felles programfag\n- Valgfrie programfag\n- Uspesifiserte programfag\n- Yrkesfaglig fordypning\n- Individuell opplæringsplan\n\n# Referanser\n\n* https://www.udir.no/laring-og-trivsel/lareplanverket/\n* https://www.udir.no/utdanningslopet/videregaende-opplaring/\n* http://regbok.udir.no/\n* http://grepwiki.udir.no/\n* https://www.vigo.no/vigokv/index.action",
           "path": "utdanning/timeplan/fag",
           "idFields": [
@@ -14129,10 +13545,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Gruppe av elever som mottar undervisning i samme fag.\n\n# Beskrivelse\n\nUndervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.\n\nDenne grupperingen omhandler faglig organisering av undervisningen.\n\nSe også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).",
           "path": "utdanning/timeplan/faggruppe",
           "idFields": [
@@ -14229,10 +13641,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppemedlemskap",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i faggruppe.\n\n",
           "path": "utdanning/timeplan/faggruppemedlemskap",
           "idFields": [
@@ -14326,10 +13734,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Rom hvor timene gjennomføres.",
           "path": "utdanning/timeplan/rom",
           "idFields": [
@@ -14393,10 +13797,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Timen når undervisning foregår.",
           "path": "utdanning/timeplan/time",
           "idFields": [
@@ -14493,10 +13893,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Gruppering av elever som mottar undervisning. \n\n# Beskrivelse\n\nElever i forskjellige undervisningsgrupper kan ta samme faget.\nFlere fag kan undervises i samme undervisningsgruppe.\nDet kan være flere lærere i en undervisningsgruppe.\n\nUndervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.\n\nDenne grupperingen omhandler administrering av undervisningen. \n\nSe også [Faggruppe](/docs/timeplan_faggruppe).\n",
           "path": "utdanning/timeplan/undervisningsgruppe",
           "idFields": [
@@ -14629,10 +14025,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppemedlemskap",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i undervisningsgrupper.\n\n# Beskrivelse\n\nGruppemedlemskap som knytter sammen elevforhold og undervisningsgrupper.",
           "path": "utdanning/timeplan/undervisningsgruppemedlemskap",
           "idFields": [
@@ -14693,10 +14085,7 @@
     },
     {
       "name": "utdanning-utdanningsprogram",
-      "path": [
-        "Utdanning",
-        "Utdanningsprogram"
-      ],
+      "path": "Utdanning.Utdanningsprogram",
       "types": [
         {
           "name": "Arstrinn",
@@ -14705,10 +14094,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.\n\n# Eksempler\n\n* Vg1\n* Vg2\n* Vg3\n* Vg4\n\n# Synonym\n\n* Nivå (Rogaland)\n* Klassetrinn\n* Trinn\n\n# Referanser\n\n* http://grepwiki.udir.no/index.php?title=Årstrinn\n* http://psi.udir.no/ontologi/kl06/aarstrinn",
           "path": "utdanning/utdanningsprogram/arstrinn",
           "idFields": [
@@ -14802,10 +14187,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Programområde er et kurs i den videregående skolen. Et programområde strekker seg vanligvis over ett eller flere år og er gjerne en spesialisert retning eller område for fordypning innen utdanningsprogrammet.\n\n# Beskrivelse\n\nInnenfor utdanningsprogrammet studiespesialisering, er eksempler på programområder realfag, språk, samfunnsfag og økonomi og formgivingsfag.\n\nInnenfor utdanningsprogrammet naturbruk, finnes det for eksempel i andre klasse (Vg2) programområdene akvakultur, anleggsgartner og driftsoperatør idrettsanlegg, fiske og fangst, heste- og hovslagerfag, landbruk og gartneri, reindrift og skogbruk.\n\nProgramområdekoder som slutter på  `----` angir at det er standardversjon av programområdet, og ikke en fylkeskommunal variant.\n\n# Eksempler\n\n* Anleggsmaskinførerf,PB\n* Asfaltfaget,PB\n* Banemontørfaget,PB\n* Betongfaget,PB\n* Bioenergi (D)\n* Byggdrifterfaget,PB\n* FDV-utdanning, 1 år (D)\n* Feierfaget,PB\n* Matrosfaget,PB\n* Modellbyggerfaget,PB\n* Motormannfaget,PB\n* Motormekanikerfaget,PB\n* Motorsykkelfaget,PB\n\n# Referanser\n\n* UDir Registreringshåndbok: [regbok.udir.no/35004/3344/35042-1014307.html](http://regbok.udir.no/35004/3344/35042-1014307.html)\n* Wikipedia: https://no.wikipedia.org/wiki/Programområde\n* Grepwiki: http://grepwiki.udir.no/index.php?title=Programområde",
           "path": "utdanning/utdanningsprogram/programomrade",
           "idFields": [
@@ -14925,10 +14306,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppemedlemskap",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i programområder.\n\n# Beskrivelse\n\nGruppemedlemskap som knytter sammen elevforhold og programområder.",
           "path": "utdanning/utdanningsprogram/programomrademedlemskap",
           "idFields": [
@@ -14992,10 +14369,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Enhet",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Organisasjonsenhet som gjennomfører utdanning.\n\n# Beskrivelse\n\nTypisk er dette en videregående skole, men det kan også være eksamenskontor eller andre skolerelevante enheter.\n\nInneholder utdanningsspesifikk informasjon om en organisasjonsenhet.\n\n# Eksempel\n\n- Videregående skole\n- SMI-skole\n- Fagskole\n- IB-skole\n- Eksamenskontor\n- Opplæringskontor\n- Ressurssenter\n- Fengselsundervisning\n\n",
           "path": "utdanning/utdanningsprogram/skole",
           "idFields": [
@@ -15278,10 +14651,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Utdanningsløpene i videregående skole som fører fram til studie- og/eller yrkeskompetanse/fagbrev\n\nSynonym: Utdanningsgruppe\n\n# Eksempler\n\n* Bygg- og anleggsteknikk\n* Design og håndverk\n* Elektrofag\n* Helse- og oppvekstfag\n* Idrettsfag\n* Kunst, design og arkitektur\n* Medier og kommunikasjon\n* Musikk, dans og drama\n* Naturbruk\n* Restaurant- og matfag\n* Service og samferdsel\n* Studiespesialisering\n* Teknikk og ind. produksjon\n\n# Referanser\n\n*  Fag- og timefordeling og tilbudsstruktur for Kunnskapsløftet Udir-1-2017 : https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Innhold-i-opplaringen/udir-01-2017/\n* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018606.html\n* Grepwiki: http://grepwiki.udir.no/index.php?title=Utdanningsprogram",
           "path": "utdanning/utdanningsprogram/utdanningsprogram",
           "idFields": [
@@ -15372,10 +14741,7 @@
     },
     {
       "name": "utdanning-vurdering",
-      "path": [
-        "Utdanning",
-        "Vurdering"
-      ],
+      "path": "Utdanning.Vurdering",
       "types": [
         {
           "name": "Anmerkninger",
@@ -15384,10 +14750,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Anmerkninger for en elev for et elevforhold. ",
           "path": "utdanning/vurdering/anmerkninger",
           "idFields": [
@@ -15445,10 +14807,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppe",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Gruppering av elever som tar samme eksamen \n\n# Beskrivelse\n\nUnderordnet til fag.\n\nKan brukes for å:\n* Vise forhold mellom eksamensresultat og sensor\n* Vise gruppering av elever som tok eksamen sammen\n\nDet er også mulig å koble resultater av eksamener direkte på klasse `Fag`.\n\nEksamensgrupper har en kode som er sentralt definert av VIGO.",
           "path": "utdanning/vurdering/eksamensgruppe",
           "idFields": [
@@ -15614,10 +14972,6 @@
           "deprecated": false,
           "parent": "utdanning-basisklasser:Gruppemedlemskap",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i eksamensgrupper.\n\n# Beskrivelse\n\nGruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.",
           "path": "utdanning/vurdering/eksamensgruppemedlemskap",
           "idFields": [
@@ -15751,10 +15105,6 @@
           "deprecated": false,
           "parent": "utdanning-vurdering:Fagvurdering",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Eksamensvurdering gis etter deltakelse på eksamen.",
           "path": "utdanning/vurdering/eksamensvurdering",
           "idFields": [
@@ -15865,10 +15215,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Manglende tilstedeværelse i opplæringen.\n\n# Beskrivelse\n\nFravær føres med relasjon til den undervisningen eleven har vært fraværende fra.\n\n# Fraværsgrense \n\n* Elever i videregående skole skal møte opp og delta aktivt i opplæringen. \n* Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. \n* Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.\n* Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.\n* Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.\n\n# Fravær eksamen\nDet føres ikke lenger fravær på eksamen. Dette vil bli satt som karakter. Pga dette utgår relasjonen til eksamensgruppe. Ved en senere hovedoppdatering av Informasjonsmodellen vil multiplisitet for relasjonen  undervisningsgruppe bli satt til 1.\n\n# Referanser\n\n* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html\n* Forskrift til opplæringslova \u0026#167; 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/\u0026#167;3-3\n* Forskrift til opplæringslova \u0026#167; 3-47: https://lovdata.no/forskrift/2006-06-23-724/\u0026#167;3-47\n* UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/\n* SNL. Fravær: https://snl.no/fravær\n* Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/\n* UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/\n",
           "path": "utdanning/vurdering/elevfravar",
           "idFields": [
@@ -15922,10 +15268,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Vurderingsinformasjon for en elev.",
           "path": "utdanning/vurdering/elevvurdering",
           "idFields": [
@@ -16067,10 +15409,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Karakterer og andre vurderingsuttrykk.\n\n# Beskrivelse\n\nVurdering i fag skal ha relasjon til det faget det er foretatt vurdering i.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)\n",
           "path": null,
           "idFields": [
@@ -16148,10 +15486,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Aggregert fraværsoversikt for en elev i ett fag.",
           "path": "utdanning/vurdering/fravarsoversikt",
           "idFields": [
@@ -16222,10 +15556,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Fraværsdata for en periode.",
           "path": null,
           "idFields": null,
@@ -16270,10 +15600,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Manglende tilstedeværelse i opplæringen.",
           "path": "utdanning/vurdering/fravarsregistrering",
           "idFields": [
@@ -16384,10 +15710,6 @@
           "deprecated": false,
           "parent": "utdanning-vurdering:Fagvurdering",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Karakterer og andre vurderingsuttrykk.\n\n# Beskrivelse\n\nHalvårsvurdering gis for deltakelse av en elev i en gruppe.\n\nVurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er også mulig å sette relasjon direkte til angjeldende fag.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)\n",
           "path": "utdanning/vurdering/halvarsfagvurdering",
           "idFields": [
@@ -16478,10 +15800,6 @@
           "deprecated": false,
           "parent": "utdanning-vurdering:Ordensvurdering",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Halvårsvurdering av orden og atferd..\n\n# Beskrivelse\n\nVurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et elevforhold.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)\n",
           "path": "utdanning/vurdering/halvarsordensvurdering",
           "idFields": [
@@ -16572,10 +15890,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Endringer på fastsatt karakter.",
           "path": "utdanning/vurdering/karakterhistorie",
           "idFields": [
@@ -16663,10 +15977,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Karakterer, målestokk for vurdering av elevers faglige standpunkt, prøve- eller eksamensprestasjoner\n\n# Beskrivelse\n\nDe enkelte karakterer, som til sammen danner en karakterskala, blir betegnet med tall eller andre symboler.\n\nDen relaterte skalaen må refereres fra selve verdi.\n\n# Eksempel\n\n* 6 - Seks\n* IM - Ikke møtt\n* GK - Godkjent\n* R - Realkompetanse\n\n# Referanse\n\n* Vigo Kodeverkdatabase. Karakter: [vigo.no/vigokv/karakter.action](https://www.vigo.no/vigokv/karakter.action)\n* SNL. karakterer: [snl.no/karakterer](https://snl.no/karakterer)",
           "path": "utdanning/vurdering/karakterverdi",
           "idFields": [
@@ -16747,10 +16057,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Vurdering av orden og atferd..\n\n# Beskrivelse\n\nVurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et elevforhold.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)\n",
           "path": null,
           "idFields": [
@@ -16828,10 +16134,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Skoleressurs som sensurerer eksamensbesvarelser.",
           "path": "utdanning/vurdering/sensor",
           "idFields": [
@@ -16905,10 +16207,6 @@
           "deprecated": false,
           "parent": "utdanning-vurdering:Fagvurdering",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Karakterer og andre vurderingsuttrykk.\n\n# Beskrivelse\n\nSluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.\n\nVurderingen skal ha en relasjon til det angjeldende faget.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)",
           "path": "utdanning/vurdering/sluttfagvurdering",
           "idFields": [
@@ -17019,10 +16317,6 @@
           "deprecated": false,
           "parent": "utdanning-vurdering:Ordensvurdering",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Sluttvurdering av orden og atferd..\n\n# Beskrivelse\n\nVurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et elevforhold.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)\n",
           "path": "utdanning/vurdering/sluttordensvurdering",
           "idFields": [
@@ -17113,10 +16407,6 @@
           "deprecated": false,
           "parent": "utdanning-vurdering:Fagvurdering",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Karakterer og andre vurderingsuttrykk.\n\n# Beskrivelse\n\nUnderveisvurdering gis for deltakelse av en elev i en gruppe.\n\nVurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er også mulig å sette relasjon direkte til angjeldende fag.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)",
           "path": "utdanning/vurdering/underveisfagvurdering",
           "idFields": [
@@ -17207,10 +16497,6 @@
           "deprecated": false,
           "parent": "utdanning-vurdering:Ordensvurdering",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": true,
-          "extendsRelations": true,
-          "writable": false,
           "documentation": "Underveisvurdering av orden og atferd..\n\n# Beskrivelse\n\nVurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et elevforhold.\n\n# Referanser\n\n* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)\n* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)\n* Forskrift til opplæringslova \u0026#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#\u0026#167;3-4)\n",
           "path": "utdanning/vurdering/underveisordensvurdering",
           "idFields": [
@@ -17298,10 +16584,7 @@
     },
     {
       "name": "utdanning-basisklasser",
-      "path": [
-        "Utdanning",
-        "Basisklasser"
-      ],
+      "path": "Utdanning.Basisklasser",
       "types": [
         {
           "name": "Gruppe",
@@ -17310,10 +16593,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "En generisk samling av elever og lærere\n\n# Beskrivelse \n\nGruppe representeres som en spesialisering (se tabell nedenfor).\n\nGrupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.\n",
           "path": null,
           "idFields": [
@@ -17360,10 +16639,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Deltagelse i en gruppe\n\n# Beskrivelse\n\nKnytter sammen et elevforhold og en gruppe. Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap. ",
           "path": null,
           "idFields": [
@@ -17400,10 +16675,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Et felles begrep for rollene til mennesker (elever, lærere, sensorer osv) som deltar i undervisning\n\n# Beskrivelse \n\nAbstrakt klasse som inneholder relasjoner og informasjon som brukes som elevforhold eller undervisningsforhold.\n\n# Eksempel\n\n* Lærer\n* Elev\n* Sensor",
           "path": null,
           "idFields": [
@@ -17437,10 +16708,7 @@
     },
     {
       "name": "utdanning-kodeverk",
-      "path": [
-        "Utdanning",
-        "Kodeverk"
-      ],
+      "path": "Utdanning.Kodeverk",
       "types": [
         {
           "name": "Avbruddsarsak",
@@ -17449,10 +16717,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.\n\n# Referanse\n\nRegistreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html\n",
           "path": "utdanning/kodeverk/avbruddsarsak",
           "idFields": [
@@ -17519,10 +16783,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Statuser for betaling av eksamen for privatister.",
           "path": "utdanning/kodeverk/betalingsstatus",
           "idFields": [
@@ -17589,10 +16849,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Viser hvilken bevistype eleven har fått på opplæringen.\n\n* KB - Kompetansebevis\n* VM - Vitnemål\n\n\n# Referanse\n[UDIR - Registreringshåndbok - B22](https://regbok.udir.no/oversikt)\n",
           "path": "utdanning/kodeverk/bevistype",
           "idFields": [
@@ -17659,10 +16915,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.\n* F - Fagbrev\n* S - Svennebrev\n* K - Kompetansebevis\n* B - Praksisbrev\n\n# Referanse\n[UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)\n",
           "path": "utdanning/kodeverk/brevtype",
           "idFields": [
@@ -17729,10 +16981,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Eksamensordningens form.\n\n# Eksempler:\n* Muntlig\n* Skriftlig\n* Praktisk\n\n# Referanser\n\n* https://www.vigo.no/vigokv/ekstype.action\n\n",
           "path": "utdanning/kodeverk/eksamensform",
           "idFields": [
@@ -17799,10 +17047,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kategori som et elevforhold befinner seg innenfor\n\n# Eksempel\n\nGyldige verdier kan være:\n* heltid\n* deltid\n* voksen\n* privatist\n* norsk-utv-i-utlandet\n* utenlandsk-utv-i-norge",
           "path": "utdanning/kodeverk/elevkategori",
           "idFields": [
@@ -17869,10 +17113,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Merknader til vitnemål og kompetansebevis\n\n# Beskrivelse\n\nEn fagmerknad er en merknad som har en eller flere av disse funksjonene\n\n- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform\n- utdyper opplysninger om karakterer og/eller eksamensform\n- henviser til vedlegg som gir slike opplysninger\n\n# Referanser\n\n[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)",
           "path": "utdanning/kodeverk/fagmerknad",
           "idFields": [
@@ -17939,10 +17179,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.\n\n# Beskrivelse\n\nFagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.\n\n# Eksempler\n\n* E - Elev\n* F - Fritatt\n\n# Referanse\n\n[Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)\n",
           "path": "utdanning/kodeverk/fagstatus",
           "idFields": [
@@ -18009,10 +17245,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Typer fravær.\n\n# Referanse\n\nhttps://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/\n\nVIS:\nhttps://inschool.zendesk.com/hc/no/articles/360023264091\n\n",
           "path": "utdanning/kodeverk/fravarstype",
           "idFields": [
@@ -18079,10 +17311,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.\n\n# Referanse\n[UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)\n",
           "path": "utdanning/kodeverk/fullfortkode",
           "idFields": [
@@ -18149,10 +17377,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Ekstern referanse til Grepkodeverket.\n\n# Beskrivelse\n\nGrep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.\n\nReferanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.\n\nhttps://www.udir.no/om-udir/data/kl06-grep\n\nDet er viktig å bruke Grepreferanser og ikke Vigoreferanser. \nBruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).\n  ",
           "path": null,
           "idFields": null,
@@ -18166,10 +17390,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Gruppering av karakterer etter skala (bokstav, orden osv). \n\n# Eksempler\n\n* Bokstav – bokstavkarakterer\n* Tall – tallkarakterer\n* Binær – Bestått/Ikke-bestått\n* Prosent – prosentpoeng.",
           "path": "utdanning/kodeverk/karakterskala",
           "idFields": [
@@ -18260,10 +17480,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kode for karakterer som blir endret.\n\n# Referanse\n\nhttps://regbok.udir.no/35004/3344/35042-1015043.html",
           "path": "utdanning/kodeverk/karakterstatus",
           "idFields": [
@@ -18330,10 +17546,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Stedet hvor OT-ungdom er under oppfølging.",
           "path": "utdanning/kodeverk/otenhet",
           "idFields": [
@@ -18411,10 +17623,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Statuskoder angir hva som er ungdommens hovedaktivitet\n\n# Eksempel\n\n* OTAR – I arbeid\n* OTMI – Er i militæret\n* OTAP – Arbeidspraksis eller annet tiltak i regi av NAV\n* OTUK – Ukjent aktivitet",
           "path": "utdanning/kodeverk/otstatus",
           "idFields": [
@@ -18501,10 +17709,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Resultat av avlagt prøve - Praktisk prøve + teori.\n\n# Referanse\n[UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)\n",
           "path": "utdanning/kodeverk/provestatus",
           "idFields": [
@@ -18571,10 +17775,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Del av året da skoler har undervisning (og ikke ferie).\n\n# Beskrivelse\n\nEt skoleår varer som hovedregel fra august til juni.",
           "path": "utdanning/kodeverk/skolear",
           "idFields": [
@@ -18641,10 +17841,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Angir hvem er det som eier skole\n\n# Eksempler\n\n1 = Fylke\n2 = Stat\n3 = Kommune\n4 = Privat \n\n# Referanser\n\n* Vigo Kodeverkdatabase. Skole: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)",
           "path": "utdanning/kodeverk/skoleeiertype",
           "idFields": [
@@ -18711,10 +17907,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Inndeling av skoleåret\n\n# Beskrivelse\n\nEt skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.",
           "path": "utdanning/kodeverk/termin",
           "idFields": [
@@ -18781,10 +17973,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Tilrettelegging en elev kan ha på eksamen.",
           "path": "utdanning/kodeverk/tilrettelegging",
           "idFields": [
@@ -18851,10 +18039,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Viser hvilken type et varsel er.\n\n# Eksempel\n\n* Fravær\n\n* Orden\n\n* Atferd\n\n* Manglende vurderingsgrunnlag i fag\n\n# Referanse\n\n* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)\n* [Forskrift til opplæringslova - \u0026#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)\n",
           "path": "utdanning/kodeverk/varseltype",
           "idFields": [
@@ -18921,10 +18105,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": false,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Ekstern referanse til VIGO Kodeverksbase.\n\n# Beskrivelse\n\nKodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.\n\nReferanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.\n\nhttps://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/\n",
           "path": null,
           "idFields": null,
@@ -18938,10 +18118,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "En vitnemålsmerknad har en eller flere av følgende funksjoner:\n\n* gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset\n\n* henviser til vedlegg som gir slike opplysninger\n\n* utdyper en fagmerknad\n\nDet kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.\n\n# Referanser\n[UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)\n",
           "path": "utdanning/kodeverk/vitnemalsmerknad",
           "idFields": [
@@ -19005,10 +18181,7 @@
     },
     {
       "name": "ressurs-datautstyr",
-      "path": [
-        "Ressurs",
-        "Datautstyr"
-      ],
+      "path": "Ressurs.Datautstyr",
       "types": [
         {
           "name": "DigitalEnhet",
@@ -19017,10 +18190,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": true,
           "documentation": "Beskriver ulike digitale enheter slik som feks pc, nettbrett, mobil. ",
           "path": "ressurs/datautstyr/digitalenhet",
           "idFields": [
@@ -19192,10 +18361,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Angir en gruppering av ensartede digitale enheter. Feks klassesett med iPader eller datalab med ekstra kraftige maskiner.",
           "path": "ressurs/datautstyr/enhetsgruppe",
           "idFields": [
@@ -19276,10 +18441,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Medlemskap i enhetsgrupper.\n\nGruppemedlemskap som knytter sammen Digitalenhet og Enhetsgrupper.",
           "path": "ressurs/datautstyr/enhetsgruppemedlemskap",
           "idFields": [
@@ -19330,10 +18491,7 @@
     },
     {
       "name": "ressurs-eiendel",
-      "path": [
-        "Ressurs",
-        "Eiendel"
-      ],
+      "path": "Ressurs.Eiendel",
       "types": [
         {
           "name": "Applikasjon",
@@ -19342,10 +18500,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "En applikasjon med tilhørende ressurser. \n\nEn ressurs kan være en lisens eller en rolle som tilganger inne i en applikasjon. Applikasjonen kan være en desktopapplikasjon eller en skybasert tjeneste. Brukere kan da få tilgang til denne applikasjonen hvis vedkommende har fått tildelt en ressurs knyttet til applikasjonen.",
           "path": "ressurs/eiendel/applikasjon",
           "idFields": [
@@ -19436,10 +18590,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Informasjon om hvor en applikasjon kan benyttes.\n\nEn ressurs er knyttet til en avtale som beskriver antall lisenser, lisensmodell og hvem som kan benytte den.",
           "path": "ressurs/eiendel/applikasjonsressurs",
           "idFields": [
@@ -19593,10 +18743,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Hvilke organisasjonselementers brukere som har tilgang til en ressurs.",
           "path": "ressurs/eiendel/applikasjonsressurstilgjengelighet",
           "idFields": [
@@ -19664,10 +18810,7 @@
     },
     {
       "name": "ressurs-kodeverk",
-      "path": [
-        "Ressurs",
-        "Kodeverk"
-      ],
+      "path": "Ressurs.Kodeverk",
       "types": [
         {
           "name": "Applikasjonskategori",
@@ -19676,10 +18819,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Kategorier av applikasjoner.\n\nEksempel:\n\n* Pedagogisk programvare\n* Kontorstøtte\n* Fagsystemer",
           "path": "ressurs/kodeverk/applikasjonskategori",
           "idFields": [
@@ -19746,10 +18885,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "De ulike brukertypene som kan benytte lisensen.\n\nEksempler:\n\n* ELEV\n* ANSATTSKOLE\n* ANSATTADMINISTRASJON\n* EKSTERN",
           "path": "ressurs/kodeverk/brukertype",
           "idFields": [
@@ -19816,10 +18951,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "",
           "path": "ressurs/kodeverk/enhetstype",
           "idFields": [
@@ -19886,10 +19017,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Hvordan ulike lisensmodeller kan håndheves av systemer for forvaltning av applikasjonen.\n\nEksempel:\n\n* Hardstopp (ikke lov å tildele flere lisenser enn det kildesystemet angir)\n* Ubegrenset (ingen begrensing på antall lisenser som kan tildeles)\n* Overallokering tillatt (kan tildeles lisenser utover maks antall. Ikke nødvendigvis ubegrenset)",
           "path": "ressurs/kodeverk/handhevingstype",
           "idFields": [
@@ -19956,10 +19083,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Lisensmodeller som kan knyttes til en lisens.\n\nEksempel:\n\n* site\n* user\n* device",
           "path": "ressurs/kodeverk/lisensmodell",
           "idFields": [
@@ -20026,10 +19149,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Plattformen tjenesten kan leveres på.\n\nEksempel:\n\n* Windows\n* MAC OS\n* Linux\n* IOS\n* Android",
           "path": "ressurs/kodeverk/plattform",
           "idFields": [
@@ -20096,10 +19215,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "",
           "path": "ressurs/kodeverk/produsent",
           "idFields": [
@@ -20166,10 +19281,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "",
           "path": "ressurs/kodeverk/status",
           "idFields": [
@@ -20233,10 +19344,7 @@
     },
     {
       "name": "ressurs-tilgang",
-      "path": [
-        "Ressurs",
-        "Tilgang"
-      ],
+      "path": "Ressurs.Tilgang",
       "types": [
         {
           "name": "Identitet",
@@ -20245,10 +19353,6 @@
           "deprecated": false,
           "parent": null,
           "identifiable": true,
-          "extendsIdentifiable": false,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.\n\nKilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.",
           "path": "ressurs/tilgang/identitet",
           "idFields": [
@@ -20299,10 +19403,6 @@
           "deprecated": false,
           "parent": "felles-basisklasser:Begrep",
           "identifiable": true,
-          "extendsIdentifiable": true,
-          "extendsResource": false,
-          "extendsRelations": false,
-          "writable": false,
           "documentation": "Navngir en rettighet. Hva rettigheten gir tilgang til er systemspesifikt.\n\n",
           "path": "ressurs/tilgang/rettighet",
           "idFields": [

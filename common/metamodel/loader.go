@@ -41,19 +41,15 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 		for ti := range comp.Types {
 			t := &comp.Types[ti]
 			c := &types.Class{
-				Name:                t.Name,
-				Abstract:            t.Abstract,
-				Deprecated:          t.Deprecated,
-				Documentation:       t.Documentation,
-				Stereotype:          t.Stereotype,
-				Package:             javaPkg,
-				Namespace:           csNs,
-				Identifiable:        t.Identifiable,
-				ExtendsIdentifiable: t.ExtendsIdentifiable,
-				ExtendsResource:     t.ExtendsResource,
-				ExtendsRelations:    t.ExtendsRelations,
-				Writable:            t.Writable,
-				GitTag:              doc.FintVersion,
+				Name:          t.Name,
+				Abstract:      t.Abstract,
+				Deprecated:    t.Deprecated,
+				Documentation: t.Documentation,
+				Stereotype:    t.Stereotype,
+				Package:       javaPkg,
+				Namespace:     csNs,
+				Identifiable:  t.Identifiable,
+				GitTag:        doc.FintVersion,
 			}
 			if t.Parent != nil {
 				_, parentName := splitRef(*t.Parent)
@@ -105,6 +101,26 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 	}
 
 	for _, c := range classes {
+		for _, a := range c.Attributes {
+			if a.Writable {
+				c.Writable = true
+				break
+			}
+		}
+		ref, hasParent := parentRefByClass[c]
+		if !hasParent {
+			continue
+		}
+		parent, ok := byRef[ref]
+		if !ok {
+			continue
+		}
+		c.ExtendsIdentifiable = parent.Identifiable
+		c.ExtendsRelations = len(parent.Relations) > 0
+		c.ExtendsResource = parent.Resource || len(parent.Resources) > 0
+	}
+
+	for _, c := range classes {
 		t := typeByClass[c]
 		c.Imports = computeJavaImports(c, t, byRef)
 		c.Using = computeCSUsing(c, t, byRef)
@@ -119,12 +135,12 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 	return classes, javaPCM, csPCM
 }
 
-func javaPackageFor(path []string) string {
-	return config.JAVA_PACKAGE_BASE + "." + strings.ToLower(strings.Join(path, "."))
+func javaPackageFor(path string) string {
+	return config.JAVA_PACKAGE_BASE + "." + strings.ToLower(path)
 }
 
-func csNamespaceFor(path []string) string {
-	return config.NET_NAMESPACE_BASE + "." + strings.Join(path, ".")
+func csNamespaceFor(path string) string {
+	return config.NET_NAMESPACE_BASE + "." + path
 }
 
 func javaPackageForComponent(componentName string) string {

@@ -33,27 +33,23 @@ type Document struct {
 }
 
 type Component struct {
-	Name  string   `json:"name"`
-	Path  []string `json:"path"`
-	Types []Type   `json:"types"`
+	Name  string `json:"name"`
+	Path  string `json:"path"`
+	Types []Type `json:"types"`
 }
 
 type Type struct {
-	Name                string      `json:"name"`
-	Stereotype          string      `json:"stereotype"`
-	Abstract            bool        `json:"abstract"`
-	Deprecated          bool        `json:"deprecated"`
-	Parent              *string     `json:"parent"`
-	Identifiable        bool        `json:"identifiable"`
-	ExtendsIdentifiable bool        `json:"extendsIdentifiable"`
-	ExtendsResource     bool        `json:"extendsResource"`
-	ExtendsRelations    bool        `json:"extendsRelations"`
-	Writable            bool        `json:"writable"`
-	Documentation       string      `json:"documentation"`
-	Path                *string     `json:"path"`
-	IdFields            []string    `json:"idFields"`
-	Attributes          []Attribute `json:"attributes"`
-	Relations           []Relation  `json:"relations"`
+	Name          string      `json:"name"`
+	Stereotype    string      `json:"stereotype"`
+	Abstract      bool        `json:"abstract"`
+	Deprecated    bool        `json:"deprecated"`
+	Parent        *string     `json:"parent"`
+	Identifiable  bool        `json:"identifiable"`
+	Documentation string      `json:"documentation"`
+	Path          *string     `json:"path"`
+	IdFields      []string    `json:"idFields"`
+	Attributes    []Attribute `json:"attributes"`
+	Relations     []Relation  `json:"relations"`
 }
 
 type Attribute struct {

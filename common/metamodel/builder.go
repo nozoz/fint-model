@@ -18,7 +18,7 @@ func Build(classes []*types.Class, fintVersion, sourceCommit string) *Document {
 
 	byComponent := make(map[string][]*types.Class)
 	componentOrder := make([]string, 0)
-	componentPath := make(map[string][]string)
+	componentPath := make(map[string]string)
 	for _, c := range classes {
 		name := componentNameFromPackage(c.Package, prefix)
 		path := componentPathFromNamespace(c.Namespace, namespacePrefix)
@@ -85,9 +85,8 @@ func componentNameFromPackage(pkg, prefix string) string {
 	return strings.ReplaceAll(rest, ".", "-")
 }
 
-func componentPathFromNamespace(ns, prefix string) []string {
-	rest := strings.TrimPrefix(ns, prefix+".")
-	return strings.Split(rest, ".")
+func componentPathFromNamespace(ns, prefix string) string {
+	return strings.TrimPrefix(ns, prefix+".")
 }
 
 func componentRefForQualified(qualified, prefix string) string {
@@ -111,17 +110,13 @@ func convertTypes(componentName string, classes []*types.Class, byQualified map[
 
 func convertType(componentName string, c *types.Class, byQualified map[string]*types.Class, prefix string) Type {
 	t := Type{
-		Name:                c.Name,
-		Stereotype:          c.Stereotype,
-		Abstract:            c.Abstract,
-		Deprecated:          c.Deprecated,
-		Parent:              resolveParent(c, byQualified, prefix),
-		Identifiable:        c.Identifiable,
-		ExtendsIdentifiable: c.ExtendsIdentifiable,
-		ExtendsResource:     c.ExtendsResource,
-		ExtendsRelations:    c.ExtendsRelations,
-		Writable:            c.Writable,
-		Documentation:       c.Documentation,
+		Name:          c.Name,
+		Stereotype:    c.Stereotype,
+		Abstract:      c.Abstract,
+		Deprecated:    c.Deprecated,
+		Parent:        resolveParent(c, byQualified, prefix),
+		Identifiable:  c.Identifiable,
+		Documentation: c.Documentation,
 	}
 	if c.Stereotype == StereotypeMain {
 		path := restPathFor(componentName, c.Name)
