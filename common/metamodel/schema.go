@@ -63,14 +63,19 @@ type Attribute struct {
 	Optional   bool   `json:"optional"`
 	Deprecated bool   `json:"deprecated"`
 	Writable   bool   `json:"writable"`
+	Inherited  bool   `json:"inherited"`
+	From       string `json:"from"`
 }
 
 type Relation struct {
-	Name          string         `json:"name"`
-	Target        string         `json:"target"`
-	Multiplicity  string         `json:"multiplicity"`
-	Bidirectional *Bidirectional `json:"bidirectional"`
-	Deprecated    bool           `json:"deprecated"`
+	Name             string         `json:"name"`
+	Target           string         `json:"target"`
+	Multiplicity     string         `json:"multiplicity"`
+	MultiplicityKind string         `json:"multiplicityKind"`
+	Bidirectional    *Bidirectional `json:"bidirectional"`
+	Deprecated       bool           `json:"deprecated"`
+	Inherited        bool           `json:"inherited"`
+	From             string         `json:"from"`
 }
 
 type Bidirectional struct {
@@ -91,6 +96,27 @@ const (
 	MultiplicityZeroOrMany = "0..*"
 	MultiplicityOneOrMany  = "1..*"
 )
+
+const (
+	KindOneToOne   = "ONE_TO_ONE"
+	KindNoneToOne  = "NONE_TO_ONE"
+	KindOneToMany  = "ONE_TO_MANY"
+	KindNoneToMany = "NONE_TO_MANY"
+)
+
+func MultiplicityKind(m string) string {
+	switch m {
+	case MultiplicityOne:
+		return KindOneToOne
+	case MultiplicityZeroOrOne:
+		return KindNoneToOne
+	case MultiplicityOneOrMany:
+		return KindOneToMany
+	case MultiplicityZeroOrMany:
+		return KindNoneToMany
+	}
+	return ""
+}
 
 var Primitives = map[string]struct{}{
 	"string":   {},

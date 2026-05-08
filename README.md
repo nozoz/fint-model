@@ -92,22 +92,30 @@ itself never touches the XMI — it only consumes the JSON.
             { "name": "systemId",
               "type": "felles-kompleksedatatyper:Identifikator",
               "list": false, "optional": false,
-              "deprecated": false, "writable": false }
+              "deprecated": false, "writable": false,
+              "inherited": false,
+              "from": "utdanning-vurdering:Elevvurdering" }
           ],
           "relations": [
             { "name": "elevforhold",
               "target": "utdanning-elev:Elevforhold",
               "multiplicity": "1",
+              "multiplicityKind": "ONE_TO_ONE",
               "bidirectional": {
                 "isSource": true,
                 "inverseName": "elevvurdering"
               },
-              "deprecated": false },
+              "deprecated": false,
+              "inherited": false,
+              "from": "utdanning-vurdering:Elevvurdering" },
             { "name": "vitnemalsmerknad",
               "target": "utdanning-kodeverk:Vitnemalsmerknad",
               "multiplicity": "0..*",
+              "multiplicityKind": "NONE_TO_MANY",
               "bidirectional": null,
-              "deprecated": false }
+              "deprecated": false,
+              "inherited": false,
+              "from": "utdanning-vurdering:Elevvurdering" }
           ]
         }
       ]
@@ -130,16 +138,29 @@ Conventions:
 - **Stereotypes** are the EA-canonical Norwegian values: `hovedklasse`
   (the identifiable, REST-exposed kind), `datatype`, `abstrakt`,
   `referanse`.
-- **Inheritance is normalised**: each type lists only its *own*
-  attributes and relations; inherited members are reachable via
-  `parent`. Walking the parent chain is trivial in any consumer (load
-  all types into a `map["component:Name"]*Type`, recurse on `parent`).
-  This keeps single-base-class edits from cascading across all
-  subclasses in CI diffs.
-- **Bidirectionality** is a single nullable struct: `bidirectional: null`
-  for unidirectional, `bidirectional: { isSource, inverseName }` when
-  bidirectional. `isSource` matters chiefly for many-to-many — for 1-1
-  / 1-* either side is structurally fine.
+- **Attributes and relations are pre-flattened.** Each type's
+  `attributes` and `relations` arrays contain *both* its own entries
+  *and* everything inherited from the parent chain (own first, then
+  parent's, then grandparent's, …). Each entry carries:
+  - `inherited` (bool) — `false` for the type's own entries, `true` if
+    the entry was inherited from a parent.
+  - `from` (`"component:Name"`) — the type that *declares* the entry.
+    Populated for both own and inherited entries (own entries point at
+    the type itself), so consumers can grep "who declares X" without
+    special-casing.
+  Pre-flattening means consumers don't re-implement the parent walk.
+  Filter `inherited: false` to recover own-only when needed (e.g. when
+  emitting Java with `super.X()` calls so the child class doesn't
+  redeclare inherited fields).
+- **`multiplicity` is shipped both ways.** `multiplicity` is the
+  source-of-truth UML string (`"1"`, `"0..1"`, `"0..*"`, `"1..*"`)
+  and diff-friendly. `multiplicityKind` is the derived enum-friendly
+  form (`ONE_TO_ONE`, `NONE_TO_ONE`, `ONE_TO_MANY`, `NONE_TO_MANY`)
+  so consumers don't repeat the same 4-line lookup.
+- **`bidirectional`** is a single nullable struct: `null` for
+  unidirectional, `{ isSource, inverseName }` when bidirectional.
+  `isSource` matters chiefly for many-to-many — for 1-1 / 1-* either
+  side is structurally fine.
 - **Derived booleans** that require parent-chain walks (`identifiable`,
   `extendsIdentifiable`, `extendsResource`, `extendsRelations`,
   `writable`) are baked into the JSON so consumers don't have to
@@ -150,10 +171,7 @@ Conventions:
   (datatypes, abstracts, references aren't REST-exposed).
 - **`idFields`** is the parent-chain-flattened list of attribute names
   whose type is `Identifikator`, populated on every type with
-  `identifiable: true` (including abstract bases like `Begrep`). For
-  `Karakterverdi` extends `Begrep`, `idFields` is `["systemId"]` even
-  though `Karakterverdi`'s own `attributes` array is empty — it
-  inherited `systemId` from `Begrep`.
+  `identifiable: true` (including abstract bases like `Begrep`).
 
 ## CI integration
 

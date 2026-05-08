@@ -122,8 +122,6 @@ func convertType(componentName string, c *types.Class, byQualified map[string]*t
 		ExtendsRelations:    c.ExtendsRelations,
 		Writable:            c.Writable,
 		Documentation:       c.Documentation,
-		Attributes:          convertAttributes(c, byQualified, prefix),
-		Relations:           convertRelations(c, prefix),
 	}
 	if c.Stereotype == StereotypeMain {
 		path := restPathFor(componentName, c.Name)
@@ -132,7 +130,103 @@ func convertType(componentName string, c *types.Class, byQualified map[string]*t
 	if c.Identifiable {
 		t.IdFields = collectIdFields(c, byQualified)
 	}
+	t.Attributes = flatAttributes(c, byQualified, prefix)
+	t.Relations = flatRelations(c, byQualified, prefix)
 	return t
+}
+
+func typeRefFor(c *types.Class, prefix string) string {
+	return componentNameFromPackage(c.Package, prefix) + ":" + c.Name
+}
+
+func flatAttributes(c *types.Class, byQualified map[string]*types.Class, prefix string) []Attribute {
+	out := []Attribute{}
+	seen := map[string]struct{}{}
+	visited := map[*types.Class]struct{}{}
+
+	var visit func(cur *types.Class, isOwn bool)
+	visit = func(cur *types.Class, isOwn bool) {
+		if cur == nil {
+			return
+		}
+		if _, dup := visited[cur]; dup {
+			return
+		}
+		visited[cur] = struct{}{}
+
+		from := typeRefFor(cur, prefix)
+		for _, a := range cur.Attributes {
+			if _, dup := seen[a.Name]; dup {
+				continue
+			}
+			seen[a.Name] = struct{}{}
+			out = append(out, Attribute{
+				Name:       a.Name,
+				Type:       resolveTypeRef(a.Type, cur, byQualified, prefix),
+				List:       a.List,
+				Optional:   a.Optional,
+				Deprecated: a.Deprecated,
+				Writable:   a.Writable,
+				Inherited:  !isOwn,
+				From:       from,
+			})
+		}
+
+		if cur.Extends != "" {
+			if qualified, ok := resolveShortName(cur.Extends, cur, byQualified); ok {
+				visit(byQualified[qualified], false)
+			}
+		}
+	}
+	visit(c, true)
+	return out
+}
+
+func flatRelations(c *types.Class, byQualified map[string]*types.Class, prefix string) []Relation {
+	out := []Relation{}
+	seen := map[string]struct{}{}
+	visited := map[*types.Class]struct{}{}
+
+	var visit func(cur *types.Class, isOwn bool)
+	visit = func(cur *types.Class, isOwn bool) {
+		if cur == nil {
+			return
+		}
+		if _, dup := visited[cur]; dup {
+			return
+		}
+		visited[cur] = struct{}{}
+
+		from := typeRefFor(cur, prefix)
+		for _, r := range cur.Relations {
+			if _, dup := seen[r.Name]; dup {
+				continue
+			}
+			seen[r.Name] = struct{}{}
+			var bidi *Bidirectional
+			if r.InverseName != "" {
+				bidi = &Bidirectional{IsSource: r.IsSource, InverseName: r.InverseName}
+			}
+			out = append(out, Relation{
+				Name:             r.Name,
+				Target:           componentRefForQualified(r.Package+"."+r.Target, prefix),
+				Multiplicity:     r.Multiplicity,
+				MultiplicityKind: MultiplicityKind(r.Multiplicity),
+				Bidirectional:    bidi,
+				Deprecated:       r.Deprecated,
+				Inherited:        !isOwn,
+				From:             from,
+			})
+		}
+
+		if cur.Extends != "" {
+			if qualified, ok := resolveShortName(cur.Extends, cur, byQualified); ok {
+				visit(byQualified[qualified], false)
+			}
+		}
+	}
+	visit(c, true)
+	return out
 }
 
 func restPathFor(componentName, typeName string) string {
@@ -201,21 +295,6 @@ func resolveShortName(name string, c *types.Class, byQualified map[string]*types
 	return "", false
 }
 
-func convertAttributes(c *types.Class, byQualified map[string]*types.Class, prefix string) []Attribute {
-	out := make([]Attribute, 0, len(c.Attributes))
-	for _, a := range c.Attributes {
-		out = append(out, Attribute{
-			Name:       a.Name,
-			Type:       resolveTypeRef(a.Type, c, byQualified, prefix),
-			List:       a.List,
-			Optional:   a.Optional,
-			Deprecated: a.Deprecated,
-			Writable:   a.Writable,
-		})
-	}
-	return out
-}
-
 func resolveTypeRef(typeName string, c *types.Class, byQualified map[string]*types.Class, prefix string) string {
 	lower := strings.ToLower(typeName)
 	if IsPrimitive(lower) {
@@ -225,26 +304,4 @@ func resolveTypeRef(typeName string, c *types.Class, byQualified map[string]*typ
 		return componentRefForQualified(qualified, prefix)
 	}
 	return typeName
-}
-
-func convertRelations(c *types.Class, prefix string) []Relation {
-	out := make([]Relation, 0, len(c.Relations))
-	for _, r := range c.Relations {
-		var bidi *Bidirectional
-		if r.InverseName != "" {
-			bidi = &Bidirectional{
-				IsSource:    r.IsSource,
-				InverseName: r.InverseName,
-			}
-		}
-		target := componentRefForQualified(r.Package+"."+r.Target, prefix)
-		out = append(out, Relation{
-			Name:          r.Name,
-			Target:        target,
-			Multiplicity:  r.Multiplicity,
-			Bidirectional: bidi,
-			Deprecated:    r.Deprecated,
-		})
-	}
-	return out
 }

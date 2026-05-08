@@ -90,13 +90,17 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 
 	for _, c := range classes {
 		t := typeByClass[c]
-		for i, a := range t.Attributes {
-			if !strings.Contains(a.Type, ":") {
+		ownIdx := 0
+		for _, a := range t.Attributes {
+			if a.Inherited {
 				continue
 			}
-			if target, ok := byRef[a.Type]; ok && target.Resource {
-				c.Resources = append(c.Resources, c.Attributes[i])
+			if strings.Contains(a.Type, ":") {
+				if target, ok := byRef[a.Type]; ok && target.Resource {
+					c.Resources = append(c.Resources, c.Attributes[ownIdx])
+				}
 			}
+			ownIdx++
 		}
 	}
 
@@ -138,6 +142,9 @@ func splitRef(ref string) (component, name string) {
 func attributesFromJSON(in []Attribute) []types.Attribute {
 	out := make([]types.Attribute, 0, len(in))
 	for _, a := range in {
+		if a.Inherited {
+			continue
+		}
 		typeStr := a.Type
 		if strings.Contains(a.Type, ":") {
 			_, typeStr = splitRef(a.Type)
@@ -157,6 +164,9 @@ func attributesFromJSON(in []Attribute) []types.Attribute {
 func relationsFromJSON(in []Relation) []types.Association {
 	out := make([]types.Association, 0, len(in))
 	for _, r := range in {
+		if r.Inherited {
+			continue
+		}
 		targetComp, targetName := splitRef(r.Target)
 		assoc := types.Association{
 			Name:         r.Name,
@@ -189,6 +199,9 @@ func computeJavaImports(c *types.Class, t *Type, byRef map[string]*types.Class) 
 		imps = append(imps, qualified)
 	}
 	for _, a := range t.Attributes {
+		if a.Inherited {
+			continue
+		}
 		if strings.Contains(a.Type, ":") {
 			if target, ok := byRef[a.Type]; ok {
 				add(target.Package + "." + target.Name)
@@ -221,6 +234,9 @@ func computeCSUsing(c *types.Class, t *Type, byRef map[string]*types.Class) []st
 		usings = append(usings, ns)
 	}
 	for _, a := range t.Attributes {
+		if a.Inherited {
+			continue
+		}
 		if !strings.Contains(a.Type, ":") {
 			continue
 		}
