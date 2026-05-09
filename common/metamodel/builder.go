@@ -99,15 +99,14 @@ func convertType(componentName string, c *types.Class, byQualified map[string]*t
 		Abstract:      c.Abstract,
 		Deprecated:    c.Deprecated,
 		Parent:        resolveParent(c, byQualified, prefix),
-		Identifiable:  c.Identifiable,
 		Documentation: c.Documentation,
 	}
 	if c.Stereotype == StereotypeMain {
 		path := restPathFor(componentName, c.Name)
 		t.Path = &path
 	}
-	if c.Identifiable {
-		t.IdFields = collectIdFields(c, byQualified)
+	if ids := collectIdFields(c, byQualified); len(ids) > 0 {
+		t.IdFields = ids
 	}
 	t.Attributes = flatAttributes(c, byQualified, prefix)
 	t.Relations = flatRelations(c, byQualified, prefix)

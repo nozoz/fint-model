@@ -48,7 +48,7 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 				Stereotype:    t.Stereotype,
 				Package:       javaPkg,
 				Namespace:     csNs,
-				Identifiable:  t.Identifiable,
+				Identifiable:  len(t.IdFields) > 0,
 				GitTag:        doc.FintVersion,
 			}
 			if t.Parent != nil {

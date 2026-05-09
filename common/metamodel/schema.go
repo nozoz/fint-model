@@ -43,7 +43,6 @@ type Type struct {
 	Abstract      bool        `json:"abstract"`
 	Deprecated    bool        `json:"deprecated"`
 	Parent        *string     `json:"parent"`
-	Identifiable  bool        `json:"identifiable"`
 	Documentation string      `json:"documentation"`
 	Path          *string     `json:"path"`
 	IdFields      []string    `json:"idFields"`

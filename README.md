@@ -84,7 +84,6 @@ itself never touches the XMI — it only consumes the JSON.
           "name": "Elevvurdering",
           "stereotype": "hovedklasse",
           "parent": null,
-          "identifiable": true,
           "path": "utdanning/vurdering/elevvurdering",
           "idFields": ["systemId"],
           "attributes": [
@@ -160,21 +159,20 @@ Conventions:
   unidirectional, `{ isSource, inverseName }` when bidirectional.
   `isSource` matters chiefly for many-to-many — for 1-1 / 1-* either
   side is structurally fine.
-- **`identifiable`** (bool) is baked at the type level — true if any
-  attribute (own or inherited) is `Identifikator`-typed. Consumers
-  typically need this without walking the parent chain, so it's
-  pre-computed.
-
-  Other parent-chain-walks (`extendsIdentifiable`, `extendsResource`,
-  `extendsRelations`) are *not* in the JSON: a consumer that needs
-  them does a one-hop `parent` lookup.
+- **No `identifiable` flag** — derive it from `idFields`: a type is
+  identifiable iff `idFields != null && idFields.length > 0`. Same
+  info, expressed once. Other parent-chain-walks
+  (`extendsIdentifiable`, `extendsResource`, `extendsRelations`) are
+  also not in the JSON: a consumer that needs them does a one-hop
+  `parent` lookup.
 - **`path`** (REST URL fragment) is populated only for `hovedklasse`
   types — derived as `<component-with-slashes>/<lowercase-typename>`,
   e.g. `utdanning/vurdering/elevvurdering`. `null` for everything else
   (datatypes, abstracts, references aren't REST-exposed).
 - **`idFields`** is the parent-chain-flattened list of attribute names
-  whose type is `Identifikator`, populated on every type with
-  `identifiable: true` (including abstract bases like `Begrep`).
+  whose type is `Identifikator`. Populated whenever the type or any of
+  its ancestors has at least one such attribute (so abstract bases
+  like `Begrep` get `idFields: ["systemId"]` too); `null` otherwise.
 
 ## CI integration
 
