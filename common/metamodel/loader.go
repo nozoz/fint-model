@@ -36,8 +36,8 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 
 	for ci := range doc.Components {
 		comp := &doc.Components[ci]
-		javaPkg := javaPackageFor(comp.Path)
-		csNs := csNamespaceFor(comp.Path)
+		javaPkg := javaPackageFor(comp.Name)
+		csNs := csNamespaceFor(comp.Name)
 		for ti := range comp.Types {
 			t := &comp.Types[ti]
 			c := &types.Class{
@@ -101,12 +101,6 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 	}
 
 	for _, c := range classes {
-		for _, a := range c.Attributes {
-			if a.Writable {
-				c.Writable = true
-				break
-			}
-		}
 		ref, hasParent := parentRefByClass[c]
 		if !hasParent {
 			continue
@@ -135,12 +129,18 @@ func ToClasses(doc *Document) ([]*types.Class, map[string][]*types.Class, map[st
 	return classes, javaPCM, csPCM
 }
 
-func javaPackageFor(path string) string {
-	return config.JAVA_PACKAGE_BASE + "." + strings.ToLower(path)
+func javaPackageFor(componentName string) string {
+	return config.JAVA_PACKAGE_BASE + "." + strings.ReplaceAll(componentName, "-", ".")
 }
 
-func csNamespaceFor(path string) string {
-	return config.NET_NAMESPACE_BASE + "." + path
+func csNamespaceFor(componentName string) string {
+	parts := strings.Split(componentName, "-")
+	for i, p := range parts {
+		if p != "" {
+			parts[i] = strings.ToUpper(p[:1]) + p[1:]
+		}
+	}
+	return config.NET_NAMESPACE_BASE + "." + strings.Join(parts, ".")
 }
 
 func javaPackageForComponent(componentName string) string {
@@ -171,7 +171,6 @@ func attributesFromJSON(in []Attribute) []types.Attribute {
 			List:       a.List,
 			Optional:   a.Optional,
 			Deprecated: a.Deprecated,
-			Writable:   a.Writable,
 		})
 	}
 	return out

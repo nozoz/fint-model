@@ -68,12 +68,6 @@ public class Fasttillegg extends Lonn  implements FintModelObject {
         return Collections.unmodifiableList(relations);
     }
 
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = true;
     @JsonIgnore
     private final List<FintRelation> relations = createRelations();
     @NotNull

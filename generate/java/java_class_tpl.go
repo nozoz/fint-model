@@ -103,15 +103,8 @@ public {{- if .Abstract }} abstract {{- end }} class {{ .Name }} {{ if .Extends 
         return Collections.unmodifiableList(relations);
     }
 {{- end }}
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = {{ .Writable }};
-
 {{- if .Relations }}
+
     @JsonIgnore
     private final List<FintRelation> relations = createRelations();
 {{- end }}

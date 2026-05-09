@@ -39,13 +39,6 @@ public class Valuta  implements FintModelObject {
 
         return Collections.unmodifiableMap(identifikators);
     }
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = false;
     @NotNull
     private @Valid Identifikator bokstavkode;
     @NotBlank

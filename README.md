@@ -79,7 +79,6 @@ itself never touches the XMI — it only consumes the JSON.
   "components": [
     {
       "name": "utdanning-vurdering",
-      "path": "Utdanning.Vurdering",
       "types": [
         {
           "name": "Elevvurdering",
@@ -92,7 +91,7 @@ itself never touches the XMI — it only consumes the JSON.
             { "name": "systemId",
               "type": "felles-kompleksedatatyper:Identifikator",
               "list": false, "optional": false,
-              "deprecated": false, "writable": false,
+              "deprecated": false,
               "inherited": false,
               "from": "utdanning-vurdering:Elevvurdering" }
           ],
@@ -126,11 +125,11 @@ itself never touches the XMI — it only consumes the JSON.
 
 Conventions:
 
-- **Components** have two identifiers: `name` is the URL-style lowercase
-  form (`utdanning-vurdering`, `felles-kodeverk-iso`), `path` is the
-  original-cased dot-separated form (`Utdanning.Vurdering`,
-  `Felles.Kodeverk.ISO`). The C# namespace is just `FINT.Model.<path>`;
-  the Java package is `no.novari.fint.model.<lowercase(path)>`.
+- **Components** are URL-style lowercase names (`utdanning-vurdering`,
+  `felles-kodeverk-iso`). Consumers derive language-specific forms by
+  splitting on `-`: Java package is `no.novari.fint.model.<segments>`
+  joined with `.`; C# namespace is `FINT.Model.<TitleCased>` joined
+  with `.`.
 - **Cross-references** between types use `"component:Name"` strings.
   Primitives stay bare and lowercase: `string`, `boolean`, `date`,
   `datetime`, `int`, `long`, `float`, `double`. The closed primitive set
@@ -168,9 +167,7 @@ Conventions:
 
   Other parent-chain-walks (`extendsIdentifiable`, `extendsResource`,
   `extendsRelations`) are *not* in the JSON: a consumer that needs
-  them does a one-hop `parent` lookup. `writable` lives only at the
-  attribute level (`attributes[].writable`); a consumer that wants
-  "is any attribute writable" filters once.
+  them does a one-hop `parent` lookup.
 - **`path`** (REST URL fragment) is populated only for `hovedklasse`
   types — derived as `<component-with-slashes>/<lowercase-typename>`,
   e.g. `utdanning/vurdering/elevvurdering`. `null` for everything else

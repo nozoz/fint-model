@@ -61,12 +61,6 @@ public class Dokumentobjekt  implements FintComplexDatatypeObject {
         return Collections.unmodifiableList(relations);
     }
 
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = true;
     @JsonIgnore
     private final List<FintRelation> relations = createRelations();
     private String filstorrelse;

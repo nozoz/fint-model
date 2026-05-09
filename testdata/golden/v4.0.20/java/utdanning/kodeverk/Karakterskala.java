@@ -67,12 +67,6 @@ public class Karakterskala extends Begrep  implements FintModelObject {
         return Collections.unmodifiableList(relations);
     }
 
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = false;
     @JsonIgnore
     private final List<FintRelation> relations = createRelations();
 }

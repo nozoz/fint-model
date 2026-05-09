@@ -34,7 +34,6 @@ type Document struct {
 
 type Component struct {
 	Name  string `json:"name"`
-	Path  string `json:"path"`
 	Types []Type `json:"types"`
 }
 
@@ -58,7 +57,6 @@ type Attribute struct {
 	List       bool   `json:"list"`
 	Optional   bool   `json:"optional"`
 	Deprecated bool   `json:"deprecated"`
-	Writable   bool   `json:"writable"`
 	Inherited  bool   `json:"inherited"`
 	From       string `json:"from"`
 }

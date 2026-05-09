@@ -40,13 +40,6 @@ public class TilskuddFartoy extends Saksmappe  implements FintModelObject {
 
         return Collections.unmodifiableMap(identifikators);
     }
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = true;
     @NotBlank
     private String fartoyNavn;
     @NotBlank

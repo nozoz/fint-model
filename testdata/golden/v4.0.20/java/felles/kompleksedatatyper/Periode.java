@@ -31,13 +31,6 @@ import static no.novari.fint.model.FintMultiplicity.NONE_TO_MANY;
 @EqualsAndHashCode
 @ToString
 public class Periode  implements FintComplexDatatypeObject {
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = false;
     private String beskrivelse;
     private Date slutt;
     @NotNull

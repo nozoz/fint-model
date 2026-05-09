@@ -1,8 +1,8 @@
 using System;
 
-namespace FINT.Model.Utdanning.OT
+namespace FINT.Model.Utdanning.Ot
 {
-	public enum OTActions
+	public enum OtActions
     {
 	
 	GET_OTUNGDOM,

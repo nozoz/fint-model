@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 using FINT.Model.Felles.Kompleksedatatyper;
 
-namespace FINT.Model.Utdanning.OT
+namespace FINT.Model.Utdanning.Ot
 {
 	public class OtUngdom {
 		public enum Relasjonsnavn

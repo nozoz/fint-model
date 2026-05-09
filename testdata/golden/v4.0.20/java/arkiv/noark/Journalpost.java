@@ -64,12 +64,6 @@ public class Journalpost extends Registrering  implements FintComplexDatatypeObj
         return Collections.unmodifiableList(relations);
     }
 
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = true;
     @JsonIgnore
     private final List<FintRelation> relations = createRelations();
     private Long antallVedlegg;

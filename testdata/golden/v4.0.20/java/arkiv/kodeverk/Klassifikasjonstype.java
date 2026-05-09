@@ -38,11 +38,4 @@ public class Klassifikasjonstype extends Begrep  implements FintModelObject {
 
         return Collections.unmodifiableMap(identifikators);
     }
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = false;
 }

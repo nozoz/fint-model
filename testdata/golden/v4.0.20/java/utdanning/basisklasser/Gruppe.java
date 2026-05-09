@@ -38,13 +38,6 @@ public abstract class Gruppe  implements FintAbstractObject {
 
         return Collections.unmodifiableMap(identifikators);
     }
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = false;
     @NotBlank
     private String beskrivelse;
     @NotBlank

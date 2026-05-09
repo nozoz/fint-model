@@ -5,7 +5,7 @@ using FINT.Model.Resource;
 
 using FINT.Model.Felles.Basisklasser;
 
-namespace FINT.Model.Felles.Kodeverk.ISO
+namespace FINT.Model.Felles.Kodeverk.Iso
 {
 
     public class LandkodeResource : Begrep 

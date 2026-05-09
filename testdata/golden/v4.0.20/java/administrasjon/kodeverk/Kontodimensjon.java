@@ -38,11 +38,4 @@ public abstract class Kontodimensjon extends Begrep  implements FintAbstractObje
 
         return Collections.unmodifiableMap(identifikators);
     }
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = false;
 }

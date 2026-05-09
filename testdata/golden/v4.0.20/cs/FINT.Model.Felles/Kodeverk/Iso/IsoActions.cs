@@ -1,8 +1,8 @@
 using System;
 
-namespace FINT.Model.Felles.Kodeverk.ISO
+namespace FINT.Model.Felles.Kodeverk.Iso
 {
-	public enum ISOActions
+	public enum IsoActions
     {
 	
 	GET_KJONN,

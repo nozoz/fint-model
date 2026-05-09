@@ -9,7 +9,6 @@ import (
 
 func Build(classes []*types.Class, fintVersion, sourceCommit string) *Document {
 	prefix := detectPackagePrefix(classes)
-	namespacePrefix := detectNamespacePrefix(classes)
 
 	byQualified := make(map[string]*types.Class, len(classes))
 	for _, c := range classes {
@@ -18,13 +17,10 @@ func Build(classes []*types.Class, fintVersion, sourceCommit string) *Document {
 
 	byComponent := make(map[string][]*types.Class)
 	componentOrder := make([]string, 0)
-	componentPath := make(map[string]string)
 	for _, c := range classes {
 		name := componentNameFromPackage(c.Package, prefix)
-		path := componentPathFromNamespace(c.Namespace, namespacePrefix)
 		if _, seen := byComponent[name]; !seen {
 			componentOrder = append(componentOrder, name)
-			componentPath[name] = path
 		}
 		byComponent[name] = append(byComponent[name], c)
 	}
@@ -33,7 +29,6 @@ func Build(classes []*types.Class, fintVersion, sourceCommit string) *Document {
 	for _, name := range componentOrder {
 		components = append(components, Component{
 			Name:  name,
-			Path:  componentPath[name],
 			Types: convertTypes(name, byComponent[name], byQualified, prefix),
 		})
 	}
@@ -52,13 +47,6 @@ func detectPackagePrefix(classes []*types.Class) string {
 		return ""
 	}
 	return commonPrefix(classes, func(c *types.Class) string { return c.Package })
-}
-
-func detectNamespacePrefix(classes []*types.Class) string {
-	if len(classes) == 0 {
-		return ""
-	}
-	return commonPrefix(classes, func(c *types.Class) string { return c.Namespace })
 }
 
 func commonPrefix(classes []*types.Class, get func(*types.Class) string) string {
@@ -83,10 +71,6 @@ func commonPrefix(classes []*types.Class, get func(*types.Class) string) string 
 func componentNameFromPackage(pkg, prefix string) string {
 	rest := strings.TrimPrefix(pkg, prefix+".")
 	return strings.ReplaceAll(rest, ".", "-")
-}
-
-func componentPathFromNamespace(ns, prefix string) string {
-	return strings.TrimPrefix(ns, prefix+".")
 }
 
 func componentRefForQualified(qualified, prefix string) string {
@@ -161,7 +145,6 @@ func flatAttributes(c *types.Class, byQualified map[string]*types.Class, prefix 
 				List:       a.List,
 				Optional:   a.Optional,
 				Deprecated: a.Deprecated,
-				Writable:   a.Writable,
 				Inherited:  !isOwn,
 				From:       from,
 			})

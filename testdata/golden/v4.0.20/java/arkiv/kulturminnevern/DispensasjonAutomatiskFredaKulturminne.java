@@ -41,13 +41,6 @@ public class DispensasjonAutomatiskFredaKulturminne extends Saksmappe  implement
 
         return Collections.unmodifiableMap(identifikators);
     }
-
-    public boolean isWriteable() {
-        return this.writeable;
-    }
-
-    @JsonIgnore
-    private final boolean writeable = true;
     @NotBlank
     private String kulturminneId;
     @NotNull

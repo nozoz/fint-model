@@ -5,7 +5,7 @@ using FINT.Model.Resource;
 
 using FINT.Model.Felles.Kompleksedatatyper;
 
-namespace FINT.Model.Utdanning.OT
+namespace FINT.Model.Utdanning.Ot
 {
 
     public class OtUngdomResource 
